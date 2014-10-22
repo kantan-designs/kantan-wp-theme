@@ -1,0 +1,84 @@
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: "Sina Nova";
+  src: url("../font/SinaNovaReg-webfont.eot?") format("eot"), url("../font/SinaNovaReg-webfont.woff") format("woff"), url("../font/SinaNovaReg-webfont.ttf") format("truetype"); }
+
+.logo {
+  background-color: #bbb;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  text-align: center;
+  padding: 1.5em; }
+
+.col-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  width: 100%;
+  height: 100%;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  align-content: center; }
+
+.col-wrapper > * {
+  text-align: center; }
+
+.nav-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: flex-end;
+  padding-right: 20px;
+  align-content: center; }
+
+.nav-wrapper > * {
+  text-align: center;
+  padding: 1.5em;
+  margin: 1em 0 1em 0; }
+
+#menu {
+  display: none; }
+
+.row-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: center;
+  align-content: center; }
+
+.row-wrapper > * {
+  text-align: center;
+  padding: 1.5em;
+  margin: 1em 0 1em 0; }
+
+#canvas {
+  width: 100%;
+  height: 100%; }
+
+@media all and (max-width: 53em) {
+  ul li {
+    display: none; }
+
+  #menu {
+    display: block; } }

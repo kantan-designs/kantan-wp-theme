@@ -1,0 +1,74 @@
+// mixins for browser compatibility (doesn't account for IE9 and below)
+
+// flexbox pre-fixes:
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-flow($values){
+  -webkit-flex-flow: $values;
+  flex-flow: $values;
+}
+
+@mixin justify-content($val){
+  -webkit-justify-content: $val; 
+  justify-content: $val;
+}
+
+@mixin align-items($val){
+  -webkit-align-items: $val; 
+  align-items: $val;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+// CSS animation pre-fixes:
+
+
+@mixin animation($vals) {
+  -webkit-animation: $vals; /* Safari 4+ */
+  -moz-animation:    $vals; /* Fx 5+ */
+  -o-animation:      $vals; /* Opera 12+ */
+  animation:         $vals; /* IE 10+, Fx 29+ */
+}
+
+
+@mixin border-radius($vals) {
+  -webkit-border-radius: $vals; 
+  -moz-border-radius: $vals; 
+  border-radius: $vals; 
+}
+
+@mixin gradient($val1, $val2) {
+  background-color: $val1; /* fallback color if gradients are not supported */
+  background-image: -webkit-linear-gradient($val2); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+  background-image:    -moz-linear-gradient($val2); /* For Firefox (3.6 to 15) */
+  background-image:      -o-linear-gradient($val2); /* For old Opera (11.1 to 12.0) */ 
+  background-image:         linear-gradient($val2); /* Standard syntax; must be last */
+}
+
+@mixin shadow($vals...) {
+  -moz-box-shadow:    $vals;
+  -webkit-box-shadow: $vals;
+  box-shadow:         $vals;
+}
+

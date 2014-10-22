@@ -1,0 +1,223 @@
+// Global: 
+
+.width_45 {
+	width: 45%;
+}
+
+.width_50 {
+	width: 50%;
+}
+
+.width_55 {
+	width: 55%;
+}
+
+.width_60 {
+	width: 60%;
+}
+
+.width_65 {
+	width: 65%;
+}
+
+.width_70 {
+	width: 70%;
+}
+
+.width_75 {
+	width: 75%;
+}
+
+.width_80 {
+	width: 80%;
+}
+
+.width_85 {
+	width: 85%;
+}
+
+.width_90 {
+	width: 90%;
+}
+
+.width_95 {
+	width: 95%;
+}
+
+.width_100 {
+	width: 100%;
+}
+
+.white-box {
+	background-color: $white;
+}
+
+
+
+.opacity_95 {
+	opacity: 0.95;
+}
+
+
+// Header-related variables:
+
+$logo-dimensions: 5.3rem;
+$tb-padding: 1.0rem;
+$rl-padding: 30rem;
+
+
+// Hero section variables:
+
+// hide the 'Home' entry title: 
+
+h1.entry-title {
+	display:none;
+}
+
+/* background setup */
+@mixin background {
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    /* ie8- graceful degradation */
+    background-position:50% 50%\9 !important;
+    background-size:cover;
+    width:100%;
+}
+
+
+.fullscreen {
+    height:100vh;
+}
+
+
+// About section layout:
+
+#about, 
+#meet {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+
+
+#about-heading {
+	padding-top: 5rem;
+}
+
+.h2_copy {
+	padding-top: $tb-padding*5;
+}
+
+.package .h2_copy {
+	padding-top: $tb-padding*7;
+}
+
+
+
+.blue-box {
+	background-color: $dark-blue;
+	padding: $tb-padding*2 $tb-padding*4 $tb-padding*3 $tb-padding*4;
+	margin-bottom: $tb-padding*7;
+	border-radius: 5px;
+}
+
+.blue-box-title {
+	padding-bottom: $tb-padding*2;
+}
+
+.blue-box-copy {
+	padding: $tb-padding*2 $tb-padding*4 $tb-padding*2 $tb-padding*4;
+	border-radius: 3px;
+}
+
+
+
+
+@mixin checkmark($color, $size, $pad-right) {
+	font-family: 'Fontawesome';
+	font-size: $size;
+	padding-right: $pad-right;
+	color: $color;
+	content: '\f058';
+}
+
+.section-rule {
+	text-align: center;
+	width: 100%;
+}
+
+// Services section layout:
+
+
+.package-background {
+	margin-top: -15.0rem;
+}
+
+#our-services {
+	margin-top: 17.0rem;
+
+}
+
+.services_body {
+	color: $white;
+	padding-top: 0;
+}
+
+
+
+// Packages layout: 
+
+.package {
+	position: relative;
+	border-radius: 5px;
+	padding-bottom: $tb-padding*8;
+	margin-top: 2.0rem;
+	margin-bottom: 4.0rem;
+}
+
+.step-ribbon {
+	position: absolute;
+	width: 175px;
+	top: -8px;
+	left: -8px;
+}
+
+.h2_copy h2 {
+	margin-bottom: 2.0rem;
+
+}
+
+// meet the team:
+
+
+.small-round-pic {
+	padding-right: 2rem;
+	padding-bottom: 3rem;
+}
+
+.small-round-pic > * {
+   width: 250px;
+   height: 250px;
+   overflow: hidden; 
+   @include border-radius(50%);
+   border: solid 1px #666;
+}
+
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+.bio {
+	
+	padding: 5rem 0 0 0;
+	margin: 0 0 5rem 0;
+}
+
+.bio ul {
+	padding-left: 0;
+	margin-left: 0;
+
+}
