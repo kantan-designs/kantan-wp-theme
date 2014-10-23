@@ -1054,7 +1054,6 @@ object {
 }
 
 
-
 .nav-wrapper {
   text-align: center;
   padding-top: $logo-dimensions/2 + $tb-padding - $nav-font-size/2;
@@ -1188,6 +1187,8 @@ object {
 // For smaller screens:
 
 @media (max-width: 1310px) {
+
+
 	div.small-round-pic {
 		float:none;
 	}

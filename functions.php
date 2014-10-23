@@ -94,9 +94,9 @@ add_action( 'widgets_init', 'kantan_widgets_init' );
 function kantan_scripts() {
 	wp_enqueue_style( 'kantan-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'kantan-sinanova', get_template_directory_uri() . '/fonts/sinanova_regular/stylesheet.css');
-
 	wp_enqueue_script( 'kantan-navigation', get_template_directory_uri() . '/js/navigation.js' );
+
+	wp_enqueue_script( 'kantan-slicknav', get_template_directory_uri() . '/js/jquery.slicknav.js' );
 
 	wp_enqueue_script( 'kantan-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js');
 
@@ -107,16 +107,6 @@ function kantan_scripts() {
 add_action( 'wp_enqueue_scripts', 'kantan_scripts' );
 
 
-/**
- * Import Jquery:
- */
-
-function my_jquery_enqueue() {
-   wp_deregister_script('jquery');
-   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", false, null);
-   wp_enqueue_script('jquery');
-}
-if (!is_admin()) add_action('wp_enqueue_scripts', 'my_jquery_enqueue', 11);
 
 /**
  * Import FontAwesome:

@@ -16,6 +16,8 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
+
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -30,7 +32,6 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation nav-wrapper" style="background-image:url('<?php echo get_bloginfo('template_url') ?>/images/hero-background.png');" role="navigation">	
-			<a href="#" class="menu-toggle">MENU</a>		
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

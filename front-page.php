@@ -186,15 +186,23 @@ get_header(); ?>
 	
 </div>
 
-
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
+	<script src="<?php echo get_bloginfo('template_url') ?>/js/jquery.slicknav.js"></script>
+	
 	<script>
 
-	// Code for scrollable nav elements: 
+	// Initialize jquery transitions and slicknav menu: 
 
 	$(document).ready(function () {
+
+		// slicknav: 
+
+		$('#menu-kantan-main').slicknav({
+		prependTo:'#site-navigation'
+		});
+
+		
 
 		$(".logo").click(function (){
 
@@ -240,8 +248,11 @@ get_header(); ?>
 		});
 	});
 
+	// Initialize slicknav functionality: 
 
-	// Remove classes from elements at small screen sizes:
+
+
+	// Remove layout classes from elements at small-screen sizes:
 
 	$(function(){
 
@@ -257,7 +268,8 @@ get_header(); ?>
 })
 })
 
-	
+
+
 	</script>
 
 
