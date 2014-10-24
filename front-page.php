@@ -202,9 +202,18 @@ get_header(); ?>
 		prependTo:'#site-navigation'
 		});
 
+
+		$(".slicknav_btn").click(function (event){
+			event.preventDefault();
+
+			 $('html, body').animate({
+			 	scrollTop: 0
+    		}, 'slow');
+		});
 		
 
-		$(".logo").click(function (){
+		$(".logo").click(function (event){
+			event.preventDefault();
 
 			 $('html, body').animate({
 			 	scrollTop: 0
@@ -216,16 +225,17 @@ get_header(); ?>
 			event.preventDefault();
 
 			 $('html, body').animate({
-			 	scrollTop: $("#about").offset().top - $("#site-navigation").height() - 30
+			 	scrollTop: $("#about").offset().top - $("#site-navigation").height() + 10
     		}, 'slow');
 		});
 
+		
 
 		$("#menu-item-1737").click(function (event){
 			event.preventDefault();
 
 			 $('html, body').animate({
-			 	scrollTop: $("#our-services").offset().top - $("#site-navigation").height() - 30 
+			 	scrollTop: $("#our-services").offset().top - $("#site-navigation").height() + 10 
     		}, 'slow');
 		});
 
@@ -234,7 +244,7 @@ get_header(); ?>
 			event.preventDefault();
 
 			 $('html, body').animate({
-			 	scrollTop: $("#meet").offset().top - $("#site-navigation").height() - 30
+			 	scrollTop: $("#meet").offset().top - $("#site-navigation").height() + 10
     		}, 'slow');
 		});
 
@@ -243,12 +253,50 @@ get_header(); ?>
 			event.preventDefault();
 
 			 $('html, body').animate({
-			 	scrollTop: $("#point2").offset().top - $("#site-navigation").height() - $("#point2").height() - 60
+			 	scrollTop: $("#point2").offset().top - $("#site-navigation").height() - $("#point2").height() - 20
     		}, 'slow');
 		});
+
+
+		// Jquery scroll for slicknav menu items: 
+
+		$(".menu-item-1761").click(function (event){
+			event.preventDefault();
+
+			 $('html, body').animate({
+			 	scrollTop: $("#about").offset().top - $("#site-navigation").height() + 10
+    		}, 'slow');
+		});
+
+		$(".menu-item-1737").click(function (event){
+			event.preventDefault();
+
+			 $('html, body').animate({
+			 	scrollTop: $("#our-services").offset().top - $("#site-navigation").height() + 10 
+    		}, 'slow');
+		});
+
+
+		$(".menu-item-1738").click(function (event){
+			event.preventDefault();
+
+			 $('html, body').animate({
+			 	scrollTop: $("#meet").offset().top - $("#site-navigation").height() + 10
+    		}, 'slow');
+		});
+
+
+		$(".menu-item-1740").click(function (event){
+			event.preventDefault();
+
+			 $('html, body').animate({
+			 	scrollTop: $("#point2").offset().top - $("#site-navigation").height() - $("#point2").height() - 20
+    		}, 'slow');
+		});
+
+
 	});
 
-	// Initialize slicknav functionality: 
 
 
 
@@ -257,9 +305,8 @@ get_header(); ?>
 	$(function(){
 
 	$(window).bind("resize",function(){
-	    console.log($(this).width());
 	    
-	    if($(this).width() <1300){
+	    if($(this).width() <1310){
 	    $('#momo-text, #john-text').removeClass('left-text width_65 right')
 	    }
 	    else{
