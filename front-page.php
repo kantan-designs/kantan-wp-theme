@@ -196,20 +196,18 @@ get_header(); ?>
 
 	$(document).ready(function () {
 
-		// slicknav: 
+
+		
+		// initialize slicknav: 
 
 		$('#menu-kantan-main').slicknav({
-		prependTo:'#site-navigation'
+		prependTo:'#site-navigation',
+		closeOnClick: 'true'
 		});
 
+		// get collapsed nav height to use for Jquery scroll later: 
 
-		$(".slicknav_btn").click(function (event){
-			event.preventDefault();
-
-			 $('html, body').animate({
-			 	scrollTop: 0
-    		}, 'slow');
-		});
+		var navHeight = $("#site-navigation").height();
 		
 
 		$(".logo").click(function (event){
@@ -221,58 +219,22 @@ get_header(); ?>
 		});
 
 
-		$("#menu-item-1761").click(function (event){
-			event.preventDefault();
-
-			 $('html, body').animate({
-			 	scrollTop: $("#about").offset().top - $("#site-navigation").height() + 10
-    		}, 'slow');
-		});
-
 		
-
-		$("#menu-item-1737").click(function (event){
-			event.preventDefault();
-
-			 $('html, body').animate({
-			 	scrollTop: $("#our-services").offset().top - $("#site-navigation").height() + 10 
-    		}, 'slow');
-		});
-
-
-		$("#menu-item-1738").click(function (event){
-			event.preventDefault();
-
-			 $('html, body').animate({
-			 	scrollTop: $("#meet").offset().top - $("#site-navigation").height() + 10
-    		}, 'slow');
-		});
-
-
-		$("#menu-item-1740").click(function (event){
-			event.preventDefault();
-
-			 $('html, body').animate({
-			 	scrollTop: $("#point2").offset().top - $("#site-navigation").height() - $("#point2").height() - 20
-    		}, 'slow');
-		});
-
-
 		// Jquery scroll for slicknav menu items: 
 
 		$(".menu-item-1761").click(function (event){
 			event.preventDefault();
 
-			 $('html, body').animate({
-			 	scrollTop: $("#about").offset().top - $("#site-navigation").height() + 10
-    		}, 'slow');
+			 $('html, body').stop(true,true).animate({
+			 	scrollTop: $("#about").offset().top - navHeight + 10
+    		}, "slow" );
 		});
 
 		$(".menu-item-1737").click(function (event){
 			event.preventDefault();
 
-			 $('html, body').animate({
-			 	scrollTop: $("#our-services").offset().top - $("#site-navigation").height() + 10 
+			 $('html, body').stop(true,true).animate({
+			 	scrollTop: $("#our-services").offset().top - navHeight + 10 
     		}, 'slow');
 		});
 
@@ -280,8 +242,8 @@ get_header(); ?>
 		$(".menu-item-1738").click(function (event){
 			event.preventDefault();
 
-			 $('html, body').animate({
-			 	scrollTop: $("#meet").offset().top - $("#site-navigation").height() + 10
+			 $('html, body').stop(true,true).animate({
+			 	scrollTop: $("#meet").offset().top - navHeight + 10
     		}, 'slow');
 		});
 
@@ -289,10 +251,12 @@ get_header(); ?>
 		$(".menu-item-1740").click(function (event){
 			event.preventDefault();
 
-			 $('html, body').animate({
-			 	scrollTop: $("#point2").offset().top - $("#site-navigation").height() - $("#point2").height() - 20
+			 $('html, body').stop(true,true).animate({
+			 	scrollTop: $("#point2").offset().top - navHeight - $("#point2").height() - 20
     		}, 'slow');
 		});
+
+
 
 
 	});
@@ -312,6 +276,7 @@ get_header(); ?>
 	    else{
 	    $('#momo-text, #john-text').addClass('left-text width_65 right')
 	    }
+	    
 })
 })
 

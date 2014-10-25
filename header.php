@@ -31,7 +31,7 @@
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div>
 
-		<nav id="site-navigation" class="main-navigation" style="background-image:url('<?php echo get_bloginfo('template_url') ?>/images/hero-background.png');" role="navigation">	
+		<nav id="site-navigation" class="main-navigation background" style="background-image:url('<?php echo get_bloginfo('template_url') ?>/images/hero-background.png');" role="navigation">	
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
