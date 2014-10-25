@@ -49,7 +49,7 @@ get_header(); ?>
 			<img src="<?php echo get_bloginfo('template_url') ?>/images/white-point.png" alt="section separator">
 		</div>
 
-		<div class="package-background background col-wrapper" style="background-image:url('<?php echo get_bloginfo('template_url') ?>/images/package-background@2px.png');" data-img-width="1600" data-img-height="1064">
+		<div class="package-background background col-wrapper">
 
 			<div id="our-services" class="col-wrapper">
 				<div class="width_65">
@@ -194,6 +194,9 @@ get_header(); ?>
 
 	// Initialize jquery transitions and slicknav menu: 
 
+
+	
+
 	$(document).ready(function () {
 
 
@@ -218,6 +221,15 @@ get_header(); ?>
     		}, 'slow');
 		});
 
+		// add appearance of nav background color on scroll: 
+
+		$(window).scroll(function () {
+        if ($(document).scrollTop() > 100) {
+            $("#site-navigation").addClass("scrolled");
+        } else {
+            $("#site-navigation").removeClass("scrolled");
+        }
+    });
 
 		
 		// Jquery scroll for slicknav menu items: 
@@ -247,38 +259,24 @@ get_header(); ?>
     		}, 'slow');
 		});
 
+		var adjustsmall = 0; 
+
+  		if ($(window).width() < 650) {
+  			adjustsmall = 60
+  		}
+  		else {
+  			adjustsmall = 0
+  		}
 
 		$(".menu-item-1740").click(function (event){
 			event.preventDefault();
 
 			 $('html, body').stop(true,true).animate({
-			 	scrollTop: $("#point2").offset().top - navHeight - $("#point2").height() - 20
+			 	scrollTop: $("#get-in-touch").offset().top - navHeight - 50 + adjustsmall
     		}, 'slow');
 		});
 
-
-
-
 	});
-
-
-
-
-	// Remove layout classes from elements at small-screen sizes:
-
-	$(function(){
-
-	$(window).bind("resize",function(){
-	    
-	    if($(this).width() <1310){
-	    $('#momo-text, #john-text').removeClass('left-text width_65 right')
-	    }
-	    else{
-	    $('#momo-text, #john-text').addClass('left-text width_65 right')
-	    }
-	    
-})
-})
 
 
 

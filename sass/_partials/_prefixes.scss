@@ -51,6 +51,13 @@
   animation:         $vals; /* IE 10+, Fx 29+ */
 }
 
+@mixin transition($vals) {
+  -webkit-transition: $vals; /* Safari 4+ */
+  -moz-transition:    $vals; /* Fx 5+ */
+  -o-transition:      $vals; /* Opera 12+ */
+  transition:         $vals; /* IE 10+, Fx 29+ */
+}
+
 
 @mixin border-radius($vals) {
   -webkit-border-radius: $vals; 

@@ -84,8 +84,9 @@ h1.entry-title {
   padding-top: 7rem; }
 
 .blue-box {
-  background-color: #206f96;
+  background-color: #4B99BD;
   padding: 2rem 4rem 3rem 4rem;
+  margin-top: 3rem;
   margin-bottom: 7rem;
   border-radius: 5px; }
 
@@ -101,6 +102,7 @@ h1.entry-title {
   width: 100%; }
 
 .package-background {
+  background-color: #4B99BD;
   margin-top: -15.0rem; }
 
 #our-services {
@@ -146,8 +148,7 @@ h1.entry-title {
   float: right; }
 
 .bio {
-  padding: 5rem 0 0 0;
-  margin: 0 0 5rem 0; }
+  padding: 5rem 0 0 0; }
 
 .bio ul {
   padding-left: 0;
@@ -283,7 +284,7 @@ textarea {
   font-size: 20px;
   font-size: 2.0rem;
   line-height: 1.5;
-  color: #1a1a1a; }
+  color: #333333; }
 
 h1,
 h2,
@@ -297,7 +298,7 @@ h6 {
 
 h2 {
   line-height: 1.2;
-  color: #1a1a1a; }
+  color: #333333; }
 
 h3 {
   font-size: 2.915rem;
@@ -311,14 +312,14 @@ h5 {
   font-weight: normal; }
 
 h5 {
-  color: #1a1a1a;
+  color: #333333;
   font-weight: bold; }
 
 h6 {
   font-size: 2.0rem;
   line-height: 1.2;
   font-weight: normal;
-  color: #1a1a1a; }
+  color: #333333; }
 
 h2:not(.site-description),
 p,
@@ -656,10 +657,20 @@ h1 a:active {
 5.2 Menus
 --------------------------------------------------------------*/
 #site-navigation {
+  background-color: rgba(75, 153, 189, 0);
   position: fixed;
-  background-color: #fff;
-  overflow: hidden;
-  z-index: 99; }
+  z-index: 99;
+  -webkit-transition: background-color 300ms linear;
+  /* Safari 4+ */
+  -moz-transition: background-color 300ms linear;
+  /* Fx 5+ */
+  -o-transition: background-color 300ms linear;
+  /* Opera 12+ */
+  transition: background-color 300ms linear;
+  /* IE 10+, Fx 29+ */ }
+
+#site-navigation.scrolled {
+  background-color: #4b99bd; }
 
 .site-branding {
   position: fixed;
@@ -1275,10 +1286,12 @@ ul.slicknav_nav {
 
   h4,
   h5 {
-    font-size: 1.69231rem; }
+    font-size: 1.69231rem;
+    margin-bottom: 0.5rem; }
 
   h6 {
-    font-size: 1.57143rem; }
+    font-size: 1.57143rem;
+    margin-bottom: 1rem; }
 
   p,
   ul li {
@@ -1297,6 +1310,9 @@ ul.slicknav_nav {
     -moz-border-radius: 2px;
     border-radius: 2px; }
 
+  #package3 {
+    margin-bottom: 5rem; }
+
   .h2_copy,
   .h2_copy h2 {
     padding-top: 0;
@@ -1304,6 +1320,56 @@ ul.slicknav_nav {
 
   .h2_copy.width_70 {
     padding-top: 4rem; }
+
+  ul {
+    margin-left: 1.8rem; }
+
+  #big-orange-button h2,
+  #big-red-button h2,
+  #big-blue-button h2 {
+    font-size: 2.75rem; }
+
+  #big-orange-button,
+  #big-red-button,
+  #big-blue-button,
+  #big-orange-button:hover,
+  #big-red-button:hover,
+  #big-blue-button:hover {
+    margin: 0;
+    padding: 2rem; }
+
+  .package {
+    padding-bottom: 5rem; }
+
+  .bio {
+    padding-top: 3rem; }
+
+  #meet {
+    padding-bottom: 0; }
+
+  .small-round-pic {
+    padding-right: 0; }
+
+  #momo-text,
+  #john-text {
+    float: none;
+    width: 100%; }
+
+  #momo-text h5,
+  #momo-text h6,
+  #momo-text p,
+  #momo-text ul,
+  #john-text h5,
+  #john-text h6,
+  #john-text p,
+  #john-text ul {
+    text-align: center; }
+
+  #john-text {
+    margin-bottom: 5rem; }
+
+  #get-in-touch {
+    padding-top: 5rem; }
 
   .step-ribbon {
     position: absolute;
@@ -1315,6 +1381,77 @@ ul.slicknav_nav {
   #package2 li:before,
   #package3 li:before {
     font-size: 1.3rem;
-    margin-left: -1.9rem; } }
+    margin-left: -1.9rem; }
+
+  div#wpcf7-f1727-o1.wpcf7 {
+    width: 100%;
+    padding: 3rem 3rem 3rem 3rem;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px; }
+
+  span.wpcf7-form-control-wrap.your-message > * {
+    background-color: #dbdbdb;
+    padding-top: 1rem;
+    padding-left: 1rem; }
+
+  span.wpcf7-form-control-wrap.your-name > * {
+    float: none;
+    width: 100%; }
+
+  span.wpcf7-form-control-wrap.your-email > * {
+    float: none;
+    width: 100%;
+    margin-top: 1rem; }
+
+  .wpcf7-not-valid-tip {
+    display: none; }
+
+  input.wpcf7-form-control.wpcf7-submit {
+    font-size: 5.5rem;
+    font-weight: bold;
+    width: 100%;
+    color: #fff;
+    border: solid 1px #b80000;
+    background-color: #eb0000;
+    /* fallback color if gradients are not supported */
+    background-image: -webkit-linear-gradient(top, #ff0505, #b80000);
+    /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+    background-image: -moz-linear-gradient(top, #ff0505, #b80000);
+    /* For Firefox (3.6 to 15) */
+    background-image: -o-linear-gradient(top, #ff0505, #b80000);
+    /* For old Opera (11.1 to 12.0) */
+    background-image: linear-gradient(top, #ff0505, #b80000);
+    /* Standard syntax; must be last */
+    padding: 3rem;
+    margin: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
+
+  input.wpcf7-form-control.wpcf7-submit:hover {
+    font-size: 5.5rem;
+    font-weight: bold;
+    width: 100%;
+    color: #fff;
+    border: solid 1px #b80000;
+    background-color: #eb0000;
+    /* fallback color if gradients are not supported */
+    background-image: -webkit-linear-gradient(top, #ff1f1f, #d20000);
+    /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+    background-image: -moz-linear-gradient(top, #ff1f1f, #d20000);
+    /* For Firefox (3.6 to 15) */
+    background-image: -o-linear-gradient(top, #ff1f1f, #d20000);
+    /* For old Opera (11.1 to 12.0) */
+    background-image: linear-gradient(top, #ff1f1f, #d20000);
+    /* Standard syntax; must be last */
+    padding: 3rem;
+    margin: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; } }
 .border {
   border: solid 1px red; }
