@@ -859,7 +859,6 @@ div.slicknav_menu {
 }
 
 .page-content,
-.entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
 }
@@ -869,7 +868,9 @@ div.slicknav_menu {
 	margin: 0 0 1.5em;
 }
 
-
+.entry-content {
+	margin: 1.5rem 1.5rem 0 1.5rem;
+}
 
 
 /*--------------------------------------------------------------
@@ -1093,6 +1094,40 @@ ul.slicknav_nav {
 15.0 Custom buttons and other elements
 --------------------------------------------------------------*/
 
+#yes_button {
+	background-color: rgba(255, 130, 57, 0);
+	border: solid 5px white;
+	padding: 0.5rem 2rem 0.3rem 2rem;
+	border-radius: 5px;
+	text-transform: none;
+	@include transition(background-color 100ms linear);
+}
+
+#yes_button.opaque {
+	background-color: rgba(255, 130, 57, 1);
+}
+
+#hero_how{
+	color: rgba(255,255,255,0);
+	@include transition(color 800ms linear);
+
+}
+
+#hero_how.opaque {
+	color: rgba(255,255,255,1);
+}
+
+#hero_arrow {
+	position:relative;
+	top:3rem;
+	font-size: 5rem;
+	color: rgba(255,255,255,0);
+	@include transition(color 800ms linear);
+}
+
+#hero_arrow.opaque {
+	color: rgba(255,255,255,1);
+}
 
 #big-orange-button {
 	border: solid 1px darken(#ED7238, 10%);

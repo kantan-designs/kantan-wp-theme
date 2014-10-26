@@ -149,7 +149,7 @@ get_header(); ?>
 				<div class="bio width_65 body-copy">
 
 					<div class="small-round-pic left">
-						<img id="momo" src="<?php echo get_bloginfo('template_url') ?>/images/momoko.png" alt="Momoko Price headshot">
+						<img id="momo" src="<?php echo get_bloginfo('template_url') ?>/images/momo-headshot.png" alt="Momoko Price headshot">
 					</div>
 					<div id="momo-text" class="left-text width_65 right">
 						<?php the_field('momo-bio'); ?>
@@ -160,7 +160,7 @@ get_header(); ?>
 				<div class="bio width_65 body-copy">
 
 					<div class="small-round-pic left">
-						<img id="john" src="<?php echo get_bloginfo('template_url') ?>/images/john.jpg" alt="John McDowall headshot">
+						<img id="john" src="<?php echo get_bloginfo('template_url') ?>/images/john-headshot.png" alt="John McDowall headshot">
 					</div>
 					<div id="john-text" class="left-text width_65 right">
 						<?php the_field('john-bio'); ?>
@@ -228,13 +228,29 @@ get_header(); ?>
             $("#site-navigation").addClass("scrolled");
         } else {
             $("#site-navigation").removeClass("scrolled");
-        }
-    });
+        	}
+    	});
+
+		// change appearance of 'Yes' button after 1second delay, fade in subhead:
+
+		$(window).load(function() {
+			$("#yes_button").delay(500).queue(function(next){
+				$(this).addClass("opaque animated tada");
+				next();
+			});
+
+			$("#hero_how, #hero_arrow").delay(500).queue(function(next){
+				$(this).addClass("opaque");
+				next();
+			});
+
+		});
+
 
 		
 		// Jquery scroll for slicknav menu items: 
 
-		$(".menu-item-1761").click(function (event){
+		$(".menu-item-1761, #hero_arrow").click(function (event){
 			event.preventDefault();
 
 			 $('html, body').stop(true,true).animate({

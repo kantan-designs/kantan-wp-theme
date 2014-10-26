@@ -98,6 +98,10 @@ h1.entry-title {
 	padding-bottom: 5rem;
 }
 
+#meet.white-box.col-wrapper {
+	padding-bottom: 10rem;
+}
+
 div#about.white-box.col-wrapper {
 	position:relative;
 	z-index: 99;
@@ -119,17 +123,21 @@ div#about.white-box.col-wrapper {
 
 
 
-
 .blue-box {
-	background-color: #4B99BD;
-	padding: $tb-padding*2 $tb-padding*4 $tb-padding*3 $tb-padding*4;
+	padding: $tb-padding*2 $tb-padding*2 $tb-padding*2 $tb-padding*2;
 	margin-top:$tb-padding*3;
 	margin-bottom: $tb-padding*7;
+	border: solid 5px #4b99bd;
 	border-radius: 5px;
 }
 
 .blue-box-title {
-	padding-bottom: $tb-padding*2;
+	padding: $tb-padding*2 0 $tb-padding*2 0;
+}
+
+.blue-box-title h3 {
+	color: #333;
+	font-weight: bold;
 }
 
 .blue-box-copy {
@@ -137,6 +145,9 @@ div#about.white-box.col-wrapper {
 	border-radius: 3px;
 }
 
+.blue-box-copy h6 {
+	font-weight: bold;
+}
 
 
 

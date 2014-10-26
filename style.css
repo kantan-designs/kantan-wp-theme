@@ -74,6 +74,9 @@ h1.entry-title {
   padding-top: 5rem;
   padding-bottom: 5rem; }
 
+#meet.white-box.col-wrapper {
+  padding-bottom: 10rem; }
+
 div#about.white-box.col-wrapper {
   position: relative;
   z-index: 99; }
@@ -88,18 +91,25 @@ div#about.white-box.col-wrapper {
   padding-top: 7rem; }
 
 .blue-box {
-  background-color: #4B99BD;
-  padding: 2rem 4rem 3rem 4rem;
+  padding: 2rem 2rem 2rem 2rem;
   margin-top: 3rem;
   margin-bottom: 7rem;
+  border: solid 5px #4b99bd;
   border-radius: 5px; }
 
 .blue-box-title {
-  padding-bottom: 2rem; }
+  padding: 2rem 0 2rem 0; }
+
+.blue-box-title h3 {
+  color: #333;
+  font-weight: bold; }
 
 .blue-box-copy {
   padding: 2rem 4rem 2rem 4rem;
   border-radius: 3px; }
+
+.blue-box-copy h6 {
+  font-weight: bold; }
 
 .section-rule {
   text-align: center;
@@ -893,13 +903,15 @@ div.slicknav_menu {
   display: inline; }
 
 .page-content,
-.entry-content,
 .entry-summary {
   margin: 1.5em 0 0; }
 
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
+
+.entry-content {
+  margin: 1.5rem 1.5rem 0 1.5rem; }
 
 /*--------------------------------------------------------------
 10.2 Asides
@@ -1097,6 +1109,55 @@ ul.slicknav_nav {
 /*--------------------------------------------------------------
 15.0 Custom buttons and other elements
 --------------------------------------------------------------*/
+#yes_button {
+  background-color: rgba(255, 130, 57, 0);
+  border: solid 5px white;
+  padding: 0.5rem 2rem 0.3rem 2rem;
+  border-radius: 5px;
+  text-transform: none;
+  -webkit-transition: background-color 100ms linear;
+  /* Safari 4+ */
+  -moz-transition: background-color 100ms linear;
+  /* Fx 5+ */
+  -o-transition: background-color 100ms linear;
+  /* Opera 12+ */
+  transition: background-color 100ms linear;
+  /* IE 10+, Fx 29+ */ }
+
+#yes_button.opaque {
+  background-color: #ff8239; }
+
+#hero_how {
+  color: rgba(255, 255, 255, 0);
+  -webkit-transition: color 800ms linear;
+  /* Safari 4+ */
+  -moz-transition: color 800ms linear;
+  /* Fx 5+ */
+  -o-transition: color 800ms linear;
+  /* Opera 12+ */
+  transition: color 800ms linear;
+  /* IE 10+, Fx 29+ */ }
+
+#hero_how.opaque {
+  color: white; }
+
+#hero_arrow {
+  position: relative;
+  top: 3rem;
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0);
+  -webkit-transition: color 800ms linear;
+  /* Safari 4+ */
+  -moz-transition: color 800ms linear;
+  /* Fx 5+ */
+  -o-transition: color 800ms linear;
+  /* Opera 12+ */
+  transition: color 800ms linear;
+  /* IE 10+, Fx 29+ */ }
+
+#hero_arrow.opaque {
+  color: white; }
+
 #big-orange-button {
   border: solid 1px #de5514;
   background-color: #ed7238;
