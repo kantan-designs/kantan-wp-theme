@@ -98,10 +98,16 @@ h1.entry-title {
 	padding-bottom: 5rem;
 }
 
+div#about.white-box.col-wrapper {
+	position:relative;
+	z-index: 99;
+}
+
 
 #about-heading {
 	padding-top: 5rem;
 }
+
 
 .h2_copy {
 	padding-top: $tb-padding*5;
@@ -110,6 +116,7 @@ h1.entry-title {
 .package .h2_copy {
 	padding-top: $tb-padding*7;
 }
+
 
 
 
@@ -151,11 +158,11 @@ h1.entry-title {
 
 .package-background {
 	background-color: #4B99BD;
-	margin-top: -15.0rem;
+	margin-top: -10.0rem;
 }
 
 #our-services {
-	margin-top: 17.0rem;
+	margin-top: 12.0rem;
 
 }
 

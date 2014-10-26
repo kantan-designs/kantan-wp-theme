@@ -74,6 +74,10 @@ h1.entry-title {
   padding-top: 5rem;
   padding-bottom: 5rem; }
 
+div#about.white-box.col-wrapper {
+  position: relative;
+  z-index: 99; }
+
 #about-heading {
   padding-top: 5rem; }
 
@@ -103,10 +107,10 @@ h1.entry-title {
 
 .package-background {
   background-color: #4B99BD;
-  margin-top: -15.0rem; }
+  margin-top: -10.0rem; }
 
 #our-services {
-  margin-top: 17.0rem; }
+  margin-top: 12.0rem; }
 
 .services_body {
   color: white;
@@ -659,7 +663,7 @@ h1 a:active {
 #site-navigation {
   background-color: rgba(75, 153, 189, 0);
   position: fixed;
-  z-index: 99;
+  z-index: 999;
   -webkit-transition: background-color 300ms linear;
   /* Safari 4+ */
   -moz-transition: background-color 300ms linear;
@@ -674,7 +678,7 @@ h1 a:active {
 
 .site-branding {
   position: fixed;
-  z-index: 100; }
+  z-index: 1000; }
 
 .site-description {
   display: none; }
