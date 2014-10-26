@@ -290,12 +290,17 @@ textarea {
   line-height: 1.5;
   color: #333333; }
 
+p,
+li:not(.menu-item) {
+  font-family: "PT Sans", sans-serif; }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  font-family: "PT Sans", sans-serif;
   font-weight: bold;
   font-size: 5.5rem;
   color: white; }
@@ -553,7 +558,8 @@ div#wpcf7-f1727-o1.wpcf7 {
 span.wpcf7-form-control-wrap.your-message > * {
   background-color: #dbdbdb;
   padding-top: 1rem;
-  padding-left: 1rem; }
+  padding-left: 1rem;
+  font-family: "PT Sans", sans-serif; }
 
 span.wpcf7-form-control-wrap.your-name > * {
   float: left;
