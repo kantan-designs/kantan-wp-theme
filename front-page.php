@@ -221,7 +221,7 @@ get_header(); ?>
     		}, 'slow');
 		});
 
-		// add appearance of nav background color on scroll: 
+		// add appearance of nav background color on scroll:
 
 		$(window).scroll(function () {
         if ($(document).scrollTop() > 100) {
@@ -230,6 +230,14 @@ get_header(); ?>
             $("#site-navigation").removeClass("scrolled");
         	}
     	});
+
+		// make sure nav background is opaque on small screens: 
+
+    	$(".slicknav_menu").click(function (event){
+			event.preventDefault();
+			$("#site-navigation").addClass("scrolled");
+        });
+
 
 		// change appearance of 'Yes' button after 1second delay, fade in subhead:
 

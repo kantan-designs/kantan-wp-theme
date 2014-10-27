@@ -1454,6 +1454,9 @@ ul.slicknav_nav {
     font-size: 1.3rem;
     margin-left: -1.9rem; }
 
+  #yes_button {
+    border: solid 3px #fff; }
+
   div#wpcf7-f1727-o1.wpcf7 {
     width: 100%;
     padding: 3rem 3rem 3rem 3rem;
