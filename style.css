@@ -1158,6 +1158,9 @@ ul.slicknav_nav {
 #hero_arrow.opaque {
   color: white; }
 
+#second_line {
+  padding-top: 1.5rem; }
+
 #big-orange-button {
   border: solid 1px #de5514;
   background-color: #ed7238;

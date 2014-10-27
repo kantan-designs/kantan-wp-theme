@@ -1129,6 +1129,10 @@ ul.slicknav_nav {
 	color: rgba(255,255,255,1);
 }
 
+#second_line {
+	padding-top: 1.5rem;
+}
+
 #big-orange-button {
 	border: solid 1px darken(#ED7238, 10%);
 	@include gradient(#ED7238,(top, lighten(#ED7238, 5%), darken(#ED7238, 10%) ));
