@@ -226,9 +226,7 @@ get_header(); ?>
 		$(window).scroll(function () {
         if ($(document).scrollTop() > 100) {
             $("#site-navigation").addClass("scrolled");
-        } else {
-            $("#site-navigation").removeClass("scrolled");
-        	}
+        	}   
     	});
 
 		// make sure nav background is opaque on small screens: 
@@ -310,7 +308,6 @@ get_header(); ?>
 		});
 
 	});
-
 
 
 	</script>
