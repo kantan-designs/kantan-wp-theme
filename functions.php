@@ -96,8 +96,6 @@ function kantan_scripts() {
 
 	wp_enqueue_script( 'kantan-navigation', get_template_directory_uri() . '/js/navigation.js' );
 
-	wp_enqueue_script( 'kantan-slicknav', get_template_directory_uri() . '/js/jquery.slicknav.js' );
-
 	wp_enqueue_style( 'animate-css', get_template_directory_uri() . '/css/animate.css' );
 
 	wp_enqueue_script( 'kantan-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js');

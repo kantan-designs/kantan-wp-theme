@@ -239,13 +239,13 @@ get_header(); ?>
         });
 
 
-		// change appearance of 'Yes' button after 1second delay, fade in subhead:
+		// Fade in subhead and color in 'yes' button:
 
 		$(window).load(function() {
-			$("#yes_button").delay(500).queue(function(next){
-				$(this).addClass("opaque animated tada");
-				next();
-			});
+
+			$("#yes_button").delay(500).queue(function(){
+				$(this).addClass("opaque");
+			});	
 
 			$("#hero_how, #hero_arrow").delay(500).queue(function(next){
 				$(this).addClass("opaque");
@@ -254,8 +254,17 @@ get_header(); ?>
 
 		});
 
+		// add animate.css to desktop browsers only:
 
-		
+		 var isMobile = window.matchMedia("only screen and (max-width: 1024px)");
+
+		 if (!isMobile.matches) { 
+		 	$("#yes_button").delay(500).queue(function(){
+				$(this).addClass("opaque animated tada");
+			});
+		 }
+
+
 		// Jquery scroll for slicknav menu items: 
 
 		$(".menu-item-1761, #hero_arrow").click(function (event){
