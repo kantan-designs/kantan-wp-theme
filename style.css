@@ -1328,92 +1328,8 @@ ul.slicknav_nav {
   div.small-round-pic {
     float: none; }
 
-  div.left-text.width_65.right {
-    width: 80%; } }
-@media (min-width: 650px) {
-  div.slicknav_menu {
-    display: none; } }
-@media (max-width: 650px) {
-  div.slicknav_menu {
-    display: block; }
-
-  ul.slicknav_nav {
-    padding-bottom: 0; }
-
-  .main-navigation ul,
-  .blue-box {
-    display: none; }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: 3.14286rem; }
-
-  h2 {
-    font-size: 2.75rem; }
-
-  h3 {
-    font-size: 1.83333rem; }
-
-  h4,
-  h5 {
-    font-size: 1.69231rem;
-    margin-bottom: 0.5rem; }
-
-  h6 {
-    font-size: 1.57143rem;
-    margin-bottom: 1rem; }
-
-  p,
-  ul li {
-    font-size: 1.375rem; }
-
-  .width_65,
-  .width_50,
-  .width_70 {
+  .left-text.width_65.right {
     width: 80%; }
-
-  #package1.width_65,
-  #package2.width_65,
-  #package3.width_65 {
-    width: 90%;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px; }
-
-  #package3 {
-    margin-bottom: 5rem; }
-
-  .h2_copy,
-  .h2_copy h2 {
-    padding-top: 0;
-    margin-bottom: 0; }
-
-  .h2_copy.width_70 {
-    padding-top: 4rem; }
-
-  ul {
-    margin-left: 1.8rem; }
-
-  #big-orange-button h2,
-  #big-red-button h2,
-  #big-blue-button h2 {
-    font-size: 2.75rem; }
-
-  #big-orange-button,
-  #big-red-button,
-  #big-blue-button,
-  #big-orange-button:hover,
-  #big-red-button:hover,
-  #big-blue-button:hover {
-    margin: 0;
-    padding: 2rem; }
-
-  .package {
-    padding-bottom: 5rem; }
 
   .bio {
     padding-top: 3rem; }
@@ -1440,25 +1356,43 @@ ul.slicknav_nav {
     text-align: center; }
 
   #john-text {
+    margin-bottom: 5rem; } }
+@media (min-width: 768px) {
+  div.slicknav_menu {
+    display: none; } }
+@media (max-width: 1024px) {
+  div.slicknav_menu {
+    display: block; }
+
+  ul.slicknav_nav {
+    padding-bottom: 0; }
+
+  .main-navigation ul,
+  .blue-box {
+    display: none; }
+
+  .width_65,
+  .width_50,
+  .width_70 {
+    width: 80%; }
+
+  #package3 {
     margin-bottom: 5rem; }
+
+  ul {
+    margin-left: 1.8rem; }
+
+  .package {
+    padding-bottom: 5rem; }
 
   #get-in-touch {
     padding-top: 5rem; }
-
-  .step-ribbon {
-    position: absolute;
-    width: 75px;
-    top: -2px;
-    left: -2px; }
 
   #package1 li:before,
   #package2 li:before,
   #package3 li:before {
     font-size: 1.3rem;
     margin-left: -1.9rem; }
-
-  #yes_button {
-    border: solid 3px #fff; }
 
   div#wpcf7-f1727-o1.wpcf7 {
     width: 100%;
@@ -1530,5 +1464,71 @@ ul.slicknav_nav {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px; } }
+@media (max-width: 768px) {
+  #yes_button {
+    border: solid 3px #fff; }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 3.14286rem; }
+
+  h2 {
+    font-size: 2.75rem; }
+
+  h3 {
+    font-size: 1.83333rem; }
+
+  h4,
+  h5 {
+    font-size: 1.69231rem;
+    margin-bottom: 0.5rem; }
+
+  h6 {
+    font-size: 1.57143rem;
+    margin-bottom: 1rem; }
+
+  p,
+  ul li {
+    font-size: 1.375rem; }
+
+  #package1.width_65,
+  #package2.width_65,
+  #package3.width_65 {
+    width: 90%;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px; }
+
+  .step-ribbon {
+    position: absolute;
+    width: 75px;
+    top: -2px;
+    left: -2px; }
+
+  .h2_copy,
+  .h2_copy h2 {
+    padding-top: 0;
+    margin-bottom: 0; }
+
+  .h2_copy.width_70 {
+    padding-top: 4rem; }
+
+  #big-orange-button h2,
+  #big-red-button h2,
+  #big-blue-button h2 {
+    font-size: 2.75rem; }
+
+  #big-orange-button,
+  #big-red-button,
+  #big-blue-button,
+  #big-orange-button:hover,
+  #big-red-button:hover,
+  #big-blue-button:hover {
+    margin: 0;
+    padding: 2rem; } }
 .border {
   border: solid 1px red; }

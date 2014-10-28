@@ -1243,140 +1243,17 @@ ul.slicknav_nav {
 	}
 }
 
+// For less than large screens:
+
 @media (max-width: 1310px) {
 	
 	div.small-round-pic {
 		float:none;
 	}
 
-	div.left-text.width_65.right {
-		width: 80%;
-	}
-
-}
-
-// Hide menu btn for larger screens:
-
-@media (min-width: 650px) {
-
-	div.slicknav_menu {
-		display:none;
-	}
-}
-
-// Responsive changes for small device screens:
-
-@media (max-width: 650px) {
-
-	// Responsive nav 
-
-	div.slicknav_menu {
-		display:block;
-	}
-
-	ul.slicknav_nav {
-		padding-bottom: 0;
-	}
-
-	// hide normal menu, extra elements in small screens 
-
-	.main-navigation ul,
-	.blue-box {
-		display: none;
-	}
 	
-
-	// Typography for small screens:
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6
- 	{
-		font-size: $h1_size / 1.75;
-	}
-
-	h2 {
-		font-size: $h1_size / 2;	
-	}
-
-	h3 {
-		font-size: $h1_size / 3;
-	}
-
-	h4,
-	h5 {
-		font-size: $h1_size / 3.25;
-		margin-bottom: 0.5rem;
-	}
-
-	h6 {
-		font-size: $h1_size / 3.5;
-		margin-bottom: 1rem;
-	}
-
-	p, 
-	ul li {
-		font-size: $h1_size / 4;
-	}
-
-	// Layout width changes for small screens:
-
-	.width_65,
-	.width_50, 
-	.width_70 {
+	.left-text.width_65.right {
 		width: 80%;
-	}
-
-	#package1.width_65,
-	#package2.width_65,
-	#package3.width_65
-	 {	width: 90%;
-		@include border-radius(2px);
-	}
-
-	#package3 {
-		margin-bottom: 5rem;
-	}
-
-	.h2_copy, 
-	.h2_copy h2 {
-		padding-top: 0;
-		margin-bottom: 0;
-	}
-
-	.h2_copy.width_70 {
-		padding-top: 4rem;
-	}
-
-	ul {
-		margin-left:1.8rem;
-
-	}
-
-	#big-orange-button h2,
-	#big-red-button h2,
-	#big-blue-button h2 {
-		font-size: $h1_size * 0.5;
-	}
-
-	#big-orange-button,
-	#big-red-button,
-	#big-blue-button,
-	#big-orange-button:hover,
-	#big-red-button:hover,
-	#big-blue-button:hover
-	 {
-		margin: 0;
-		padding: 2rem;
-	}
-
-
-
-	.package {
-		padding-bottom: 5rem;
 	}
 
 	.bio {
@@ -1412,6 +1289,72 @@ ul.slicknav_nav {
 	#john-text {
 		margin-bottom: 5rem;
 	}
+}
+
+// Hide menu btn for non-tiny screens:
+
+@media (min-width: 768px) {
+
+	div.slicknav_menu {
+		display:none;
+	}
+}
+
+// Responsive changes for tablet AND phone screens:
+
+@media (max-width: 1024px) {
+
+	// Responsive nav 
+
+	div.slicknav_menu {
+		display:block;
+	}
+
+	ul.slicknav_nav {
+		padding-bottom: 0;
+	}
+
+	// hide normal menu, extra elements in small screens 
+
+	.main-navigation ul,
+	.blue-box {
+		display: none;
+	}
+	
+
+	// Typography for small screens:
+
+	
+
+	// Layout width changes for small screens:
+
+	.width_65,
+	.width_50, 
+	.width_70 {
+		width: 80%;
+	}
+
+	
+	#package3 {
+		margin-bottom: 5rem;
+	}
+
+	
+
+	ul {
+		margin-left:1.8rem;
+
+	}
+
+	
+
+
+
+	.package {
+		padding-bottom: 5rem;
+	}
+
+	
 
 	#get-in-touch {
 		padding-top: 5rem;
@@ -1419,12 +1362,7 @@ ul.slicknav_nav {
 
 	// adjust image sizes and stuff:
 
-	.step-ribbon {
-		position: absolute;
-		width: 75px;
-		top: -2px;
-		left: -2px;
-		}
+	
 
 	#package1 li:before,
 	#package2 li:before, 
@@ -1433,9 +1371,7 @@ ul.slicknav_nav {
 		margin-left: -1.9rem;
 	}
 
-	#yes_button {
-		border: solid 3px #fff;
-	}
+	
 
 	// adjust form styling: 
 
@@ -1494,10 +1430,94 @@ ul.slicknav_nav {
 		@include border-radius(5px);
 	}
 
-
-
 }
 
+
+// responsive changes for phone only: 
+
+@media (max-width: 768px) {
+
+	#yes_button {
+		border: solid 3px #fff;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6
+ 	{
+		font-size: $h1_size / 1.75;
+	}
+
+	h2 {
+		font-size: $h1_size / 2;	
+	}
+
+	h3 {
+		font-size: $h1_size / 3;
+	}
+
+	h4,
+	h5 {
+		font-size: $h1_size / 3.25;
+		margin-bottom: 0.5rem;
+	}
+
+	h6 {
+		font-size: $h1_size / 3.5;
+		margin-bottom: 1rem;
+	}
+
+	p, 
+	ul li {
+		font-size: $h1_size / 4;
+	}
+
+
+	#package1.width_65,
+	#package2.width_65,
+	#package3.width_65
+	 {	width: 90%;
+		@include border-radius(2px);
+	}
+
+	.step-ribbon {
+		position: absolute;
+		width: 75px;
+		top: -2px;
+		left: -2px;
+		}
+
+	.h2_copy, 
+	.h2_copy h2 {
+		padding-top: 0;
+		margin-bottom: 0;
+	}
+
+	.h2_copy.width_70 {
+		padding-top: 4rem;
+	}
+
+	#big-orange-button h2,
+	#big-red-button h2,
+	#big-blue-button h2 {
+		font-size: $h1_size * 0.5;
+	}
+
+	#big-orange-button,
+	#big-red-button,
+	#big-blue-button,
+	#big-orange-button:hover,
+	#big-red-button:hover,
+	#big-blue-button:hover
+	 {
+		margin: 0;
+		padding: 2rem;
+	}
+
+}
 
 
 // Extra for troubleshooting layout: 
