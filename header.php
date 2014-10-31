@@ -17,7 +17,20 @@
 
 <?php wp_head(); ?>
 
+<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo('template_url') ?>/css/all-ie-only.css" />
+<![endif]-->
 
+<!--[if lt IE 9]>
+   	<script>
+      document.createElement('header');
+      document.createElement('nav');
+      document.createElement('section');
+      document.createElement('article');
+      document.createElement('aside');
+      document.createElement('footer');
+   	</script>
+	<![endif]-->
 </head>
 
 <body <?php body_class(); ?>>

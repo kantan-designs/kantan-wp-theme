@@ -190,16 +190,13 @@ get_header(); ?>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="<?php echo get_bloginfo('template_url') ?>/js/jquery.slicknav.js"></script>
 	
+	
 	<script>
 
 	// Initialize jquery transitions and slicknav menu: 
 
 
-	
-
 	$(document).ready(function () {
-
-
 		
 		// initialize slicknav: 
 
@@ -308,11 +305,9 @@ get_header(); ?>
 		});
 
 	});
-
-
 	</script>
 
-
+	
 
 </body>
 </html>
