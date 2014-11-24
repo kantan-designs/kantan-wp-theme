@@ -1530,5 +1530,8 @@ ul.slicknav_nav {
   #big-blue-button:hover {
     margin: 0;
     padding: 2rem; } }
+@media (max-width: 320px) {
+  .fullscreen {
+    height: 568px; } }
 .border {
   border: solid 1px red; }

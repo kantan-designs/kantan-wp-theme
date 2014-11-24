@@ -18,6 +18,7 @@ get_header(); ?>
 			<?php get_template_part( 'content', 'page' ); ?>
 
 			<?php endwhile; ?>
+			
 		</div>
 
 		<div class="col-wrapper">
@@ -190,11 +191,13 @@ get_header(); ?>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="<?php echo get_bloginfo('template_url') ?>/js/jquery.slicknav.js"></script>
 	
+
 	
 	<script>
 
 	// Initialize jquery transitions and slicknav menu: 
 
+	// Remove min-height on iOS after fullscreen initialization
 
 	$(document).ready(function () {
 		
@@ -233,6 +236,8 @@ get_header(); ?>
 			$("#site-navigation").addClass("scrolled");
         });
 
+
+    	
 
 		// Fade in subhead and color in 'yes' button:
 

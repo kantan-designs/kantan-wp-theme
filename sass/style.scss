@@ -1520,6 +1520,15 @@ ul.slicknav_nav {
 }
 
 
+@media (max-width: 320px) {
+	.fullscreen {
+		height: 568px;
+	}
+}
+
+
+
+
 // Extra for troubleshooting layout: 
 
 .border {
