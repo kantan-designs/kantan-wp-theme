@@ -723,7 +723,7 @@ ul.slicknav_nav > * {
 	float:none;
 }
 
-div.slicknav_menu {
+.slicknav_menu {
 	float: right;	
 }
 
@@ -1067,7 +1067,7 @@ ul#menu-kantan-main.menu > *:not(:last-child) {
 }
 
 .slicknav_menu {
-	padding: 3rem 3rem 3rem 0;
+	display:none
 }
 
 .slicknav_menutxt {
@@ -1234,7 +1234,7 @@ ul.slicknav_nav {
 16.0 Media Queries
 --------------------------------------------------------------*/
 
-// For large screens:
+// For desktop+ screens:
 
 @media (min-width: 1310px) {
 	
@@ -1243,7 +1243,9 @@ ul.slicknav_nav {
 	}
 }
 
-// For less than large screens:
+
+
+// Break & wrap 'Team' content with width < 1310px:
 
 @media (max-width: 1310px) {
 	
@@ -1264,6 +1266,7 @@ ul.slicknav_nav {
 	#meet {
 		padding-bottom: 0;
 	}
+
 	.small-round-pic {
 		padding-right: 0;
 	}
@@ -1291,151 +1294,54 @@ ul.slicknav_nav {
 	}
 }
 
-// Hide menu btn for non-tiny screens:
 
-@media (min-width: 768px) {
 
-	div.slicknav_menu {
-		display:none;
-	}
-}
 
-// Responsive changes for tablet AND phone screens:
+// Switch to responsive nav for tablet + phone screens:
 
 @media (max-width: 1024px) {
 
-	// Responsive nav 
-
-	div.slicknav_menu {
+	.slicknav_menu {
 		display:block;
+		padding: 3rem 3rem 3rem 0;
+
 	}
 
 	ul.slicknav_nav {
 		padding-bottom: 0;
 	}
 
-	// hide normal menu, extra elements in small screens 
-
-	.main-navigation ul,
-	.blue-box {
+	.main-navigation ul {
 		display: none;
-	}
-	
-
-	// Typography for small screens:
-
-	
-
-	// Layout width changes for small screens:
-
-	.width_65,
-	.width_50, 
-	.width_70 {
-		width: 80%;
-	}
-
-	
-	#package3 {
-		margin-bottom: 5rem;
-	}
-
-	
-
-	ul {
-		margin-left:1.8rem;
-
-	}
-
-	
-
-
-
-	.package {
-		padding-bottom: 5rem;
-	}
-
-	
-
-	#get-in-touch {
-		padding-top: 5rem;
-	}
-
-	// adjust image sizes and stuff:
-
-	
-
-	#package1 li:before,
-	#package2 li:before, 
-	#package3 li:before  {
-		font-size: 1.3rem;
-		margin-left: -1.9rem;
-	}
-
-	
-
-	// adjust form styling: 
-
-	div#wpcf7-f1727-o1.wpcf7 {
-		width: 100%;
-		padding: 3rem 3rem 3rem 3rem;
-		margin-top: 3rem;
-		margin-bottom: 0;
-		background-color: rgba(255, 255, 255, 0.95);
-		@include border-radius(0px);
-	}
-
-	span.wpcf7-form-control-wrap.your-message > * {
-		background-color: #dbdbdb;
-		padding-top: 1rem;
-		padding-left: 1rem;
-	}
-
-	span.wpcf7-form-control-wrap.your-name > * {
-		float:none;
-		width:100%;
-	}
-
-	span.wpcf7-form-control-wrap.your-email > * {
-		float:none;
-		width:100%;
-		margin-top: 1rem;
-	}
-
-	.wpcf7-not-valid-tip {
-		display: none;
-	}
-
-
-	input.wpcf7-form-control.wpcf7-submit {
-		font-size: $h1_size;
-		font-weight: $h1_weight;
-		width: 100%;
-		color: #fff;
-		border: solid 1px darken(#EB0000, 10%);
-		@include gradient(#EB0000,(top, lighten(#EB0000, 5%), darken(#EB0000, 10%) ));
-		padding: 3rem;
-		margin: 0;
-		@include border-radius(5px);
-	}
-
-	input.wpcf7-form-control.wpcf7-submit:hover {
-		font-size: $h1_size;
-		font-weight: $h1_weight;
-		width: 100%;
-		color: #fff;
-		border: solid 1px darken(#EB0000, 10%);
-		@include gradient(#EB0000,(top, lighten(#EB0000, 10%), darken(#EB0000, 5%) ));
-		padding: 3rem;
-		margin: 0;
-		@include border-radius(5px);
 	}
 
 }
 
 
-// responsive changes for phone only: 
 
-@media (max-width: 768px) {
+// iPhone, iPad - portrait:
+
+
+@media (min-width: 320px) and (orientation: portrait) {
+
+	.logo {
+		width: 4rem;
+		top: 1rem;
+		left: 1.3rem;
+	}
+
+	.slicknav_menu {
+		padding: 2rem 1rem 2rem 0;
+	}
+
+	.slicknav_menutxt {
+		font-size: 1rem;
+	}
+
+	.fullscreen {
+		height: 568px;
+	}
+
 
 	#yes_button {
 		border: solid 3px #fff;
@@ -1472,15 +1378,235 @@ ul.slicknav_nav {
 
 	p, 
 	ul li {
-		font-size: $h1_size / 4;
+		font-size: $h1_size / 4;	
 	}
 
+
+	.width_65,
+	.width_50, 
+	.width_70 {
+		width: 80%;
+	}
+
+	#about {
+		padding-bottom: 0rem;
+	}
+
+	#meet.white-box.col-wrapper {
+		padding-bottom: 0rem;
+	}
+
+	.blue-box-copy h6:before {
+	@include checkmark($bright-blue, $h1_size/3.5, $rl-padding/50);
+	}
+
+	#package1 li:before {
+		@include checkmark(lighten(#ED7238,5%), $h1_size/4, $rl-padding/50);
+		margin-left: -2.5rem;
+	}
+
+	#package2 li:before {
+		@include checkmark(lighten(#EB0000, 5%), $h1_size/4, $rl-padding/50);
+		margin-left: -2.5rem;
+	}
+
+	#package3 li:before {
+		@include checkmark(lighten(#026295, 5%), $h1_size/4, $rl-padding/50);
+		margin-left: -2.5rem;
+	}
+
+
+	// adjust the padding of the 'Perfect for' bullet list so the text doesn't wrap too tightly
+	
+	.blue-box-copy {
+	padding: 0;
+	}
+
+	.package {
+		padding-bottom: 4rem;
+		margin-bottom: 1rem;
+	}
 
 	#package1.width_65,
 	#package2.width_65,
 	#package3.width_65
 	 {	width: 90%;
 		@include border-radius(2px);
+	}
+
+	#package3 {
+		margin-bottom: 7rem;
+	}
+
+	.step-ribbon {
+		position: absolute;
+		width: 75px;
+		top: -2px;
+		left: -2px;
+		}
+
+	.h2_copy, 
+	.h2_copy h2 {
+		padding-top: 0;
+		margin-bottom: 0;
+	}
+
+	.h2_copy.width_70 {
+		padding-top: 4rem;
+	}
+
+	#big-orange-button h2,
+	#big-red-button h2,
+	#big-blue-button h2 {
+		font-size: $h1_size * 0.5;
+	}
+
+	#big-orange-button,
+	#big-red-button,
+	#big-blue-button,
+	#big-orange-button:hover,
+	#big-red-button:hover,
+	#big-blue-button:hover
+	 {
+		margin: 0;
+		padding: 2rem;
+	}
+}
+
+
+// iphone 6 portrait: 
+
+@media (min-width: 375px) and (orientation: portrait) {
+	.fullscreen {
+		height: 667px;
+	}
+}
+
+// iphone 6 portrait: 
+
+@media (min-width: 414px) and (orientation: portrait) {
+	.fullscreen {
+		height: 736px;
+	}
+}
+
+
+// iphone - landscape: 
+
+@media (max-width: 736px) and (orientation: landscape) {
+
+	.logo {
+		width: 4rem;
+		top: 1rem;
+		left: 1.3rem;
+	}
+
+	.slicknav_menu {
+		padding: 2rem 1rem 2rem 0;
+	}
+
+	.slicknav_menutxt {
+		font-size: 1rem;
+	}
+
+	.fullscreen {
+		height: 500px;
+	}
+
+
+	#yes_button {
+		border: solid 3px #fff;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6
+ 	{
+		font-size: $h1_size / 1.75;
+	}
+
+	h2 {
+		font-size: $h1_size / 2;	
+	}
+
+	h3 {
+		font-size: $h1_size / 3;
+	}
+
+	h4,
+	h5 {
+		font-size: $h1_size / 3.25;
+		margin-bottom: 0.5rem;
+	}
+
+	h6 {
+		font-size: $h1_size / 3.5;
+		margin-bottom: 1rem;
+	}
+
+	p, 
+	ul li {
+		font-size: $h1_size / 4;	
+	}
+
+
+	.width_65,
+	.width_50, 
+	.width_70 {
+		width: 80%;
+	}
+
+	#about {
+		padding-bottom: 0rem;
+	}
+
+	#meet.white-box.col-wrapper {
+		padding-bottom: 0rem;
+	}
+
+	.blue-box-copy h6:before {
+		@include checkmark($bright-blue, $h1_size/3.5, $rl-padding/50);
+	}
+
+	#package1 li:before {
+		@include checkmark(lighten(#ED7238,5%), $h1_size/4, $rl-padding/50);
+		margin-left: -2.5rem;
+	}
+
+	#package2 li:before {
+		@include checkmark(lighten(#EB0000, 5%), $h1_size/4, $rl-padding/50);
+		margin-left: -2.5rem;
+	}
+
+	#package3 li:before {
+		@include checkmark(lighten(#026295, 5%), $h1_size/4, $rl-padding/50);
+		margin-left: -2.5rem;
+	}
+
+
+	// adjust the padding of the 'Perfect for' bullet list so the text doesn't wrap too tightly
+	
+	.blue-box-copy {
+	padding: 0;
+	}
+
+	.package {
+		padding-bottom: 4rem;
+		margin-bottom: 1rem;
+	}
+
+	#package1.width_65,
+	#package2.width_65,
+	#package3.width_65
+	 {	width: 90%;
+		@include border-radius(2px);
+	}
+
+	#package3 {
+		margin-bottom: 7rem;
 	}
 
 	.step-ribbon {
@@ -1517,16 +1643,135 @@ ul.slicknav_nav {
 		padding: 2rem;
 	}
 
+
+
 }
 
+// tablet - portrait adjustments: 
 
-@media (max-width: 320px) {
+@media (min-width: 768px) and (orientation: portrait) {
+
 	.fullscreen {
-		height: 568px;
+		height: 1024px;
+	}
+
+
+	#yes_button {
+		border: solid 5px #fff;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6
+ 		{
+		font-size: $h1_size;	
+	}
+
+	h2 {
+		font-size: $h1_size * 0.8;	
+	}
+
+	h3 {
+		font-size: $h1_size * 0.45;
+	}
+
+	h4,
+	h5 {
+		font-size: 2.7rem;
+		margin-bottom: 0.5rem;
+	}
+
+	h6 {
+		font-size: 2.0rem;
+		margin-bottom: 1rem;
+	}
+
+	p, 
+	ul li {
+		font-size: 2.0rem;
+	}
+
+	.blue-box-copy h6:before {
+		@include checkmark($bright-blue, $h1_size/2.5, $rl-padding/50);
+	}
+
+	#package1 li:before {
+		@include checkmark(lighten(#ED7238,5%), $h1_size/2.5, $rl-padding/50);
+		margin-left: -2.5rem;
+	}
+
+	#package2 li:before {
+		@include checkmark(lighten(#EB0000, 5%), $h1_size/2.5, $rl-padding/50);
+		margin-left: -2.5rem;
+	}
+
+	#package3 li:before {
+		@include checkmark(lighten(#026295, 5%), $h1_size/2.5, $rl-padding/50);
+		margin-left: -2.5rem;
+	}
+
+
+	.step-ribbon {
+		position: absolute;
+		width: 125px;
+		top: -5px;
+		left: -5px;
+		}
+
+	.h2_copy.width_70 {
+		padding-top: 6rem;
+	}
+		
+	#big-orange-button h2,
+	#big-red-button h2,
+	#big-blue-button h2 {
+		font-size: $h1_size * 0.8;
+	}
+
+
+	#big-orange-button,
+	#big-red-button,
+	#big-blue-button,
+	#big-orange-button:hover,
+	#big-red-button:hover,
+	#big-blue-button:hover
+	 {
+		padding: 3rem;
+		margin: 3rem 0 3rem 0;
+	}
+	
+}
+
+// tablet - landscape: 
+
+@media (min-width: 1024px) and (orientation: landscape) {
+	.width_50,
+	.width_65,
+	.width_70 {
+		width: 80%;
+	}
+
+	#big-orange-button h2,
+	#big-red-button h2,
+	#big-blue-button h2 {
+		font-size: $h1_size * 0.8;
+	}
+
+
+	#big-orange-button,
+	#big-red-button,
+	#big-blue-button,
+	#big-orange-button:hover,
+	#big-red-button:hover,
+	#big-blue-button:hover
+	 {
+		padding: 3rem;
+		margin: 3rem 0 1rem 0;
 	}
 }
-
-
 
 
 // Extra for troubleshooting layout: 
