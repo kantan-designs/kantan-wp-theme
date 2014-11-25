@@ -575,6 +575,8 @@ textarea {
 div#wpcf7-f1727-o1.wpcf7 {
   width: 75%;
   padding: 5rem 10rem 3rem 10rem;
+  margin-right: auto;
+  margin-left: auto;
   margin-top: 3rem;
   margin-bottom: 10rem;
   background-color: rgba(255, 255, 255, 0.95);
@@ -1479,7 +1481,41 @@ ul.slicknav_nav {
   #big-red-button:hover,
   #big-blue-button:hover {
     margin: 0;
-    padding: 2rem; } }
+    padding: 2rem; }
+
+  #momo-text ul,
+  #john-text ul {
+    margin-left: 0; }
+
+  div#wpcf7-f1727-o1.wpcf7 {
+    width: 90%;
+    padding: 3rem 2rem 3rem 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 4rem;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px; }
+
+  #get-in-touch {
+    padding-top: 5rem; }
+
+  span.wpcf7-form-control-wrap.your-name > * {
+    float: none;
+    width: 100%; }
+
+  span.wpcf7-form-control-wrap.your-email > * {
+    float: none;
+    width: 100%;
+    margin-top: 1rem; }
+
+  input.wpcf7-form-control.wpcf7-submit {
+    padding: 3rem;
+    margin: 0; }
+
+  input.wpcf7-form-control.wpcf7-submit:hover {
+    padding: 3rem;
+    margin: 0; } }
 @media (min-width: 375px) and (orientation: portrait) {
   .fullscreen {
     height: 667px; } }
@@ -1617,7 +1653,37 @@ ul.slicknav_nav {
   #big-red-button:hover,
   #big-blue-button:hover {
     margin: 0;
-    padding: 2rem; } }
+    padding: 2rem; }
+
+  div#wpcf7-f1727-o1.wpcf7 {
+    width: 90%;
+    padding: 3rem 2rem 3rem 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 4rem;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px; }
+
+  #get-in-touch {
+    padding-top: 5rem; }
+
+  span.wpcf7-form-control-wrap.your-name > * {
+    float: none;
+    width: 100%; }
+
+  span.wpcf7-form-control-wrap.your-email > * {
+    float: none;
+    width: 100%;
+    margin-top: 1rem; }
+
+  input.wpcf7-form-control.wpcf7-submit {
+    padding: 3rem;
+    margin: 0; }
+
+  input.wpcf7-form-control.wpcf7-submit:hover {
+    padding: 3rem;
+    margin: 0; } }
 @media (min-width: 768px) and (orientation: portrait) {
   .fullscreen {
     height: 1024px; }
@@ -1704,7 +1770,42 @@ ul.slicknav_nav {
   #big-red-button:hover,
   #big-blue-button:hover {
     padding: 3rem;
-    margin: 3rem 0 3rem 0; } }
+    margin: 3rem 0 3rem 0; }
+
+  div#wpcf7-f1727-o1.wpcf7 {
+    width: 90%;
+    padding: 3rem 3rem 3rem 3rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 8rem;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px; }
+
+  #get-in-touch {
+    padding-top: 5rem; }
+
+  span.wpcf7-form-control-wrap.your-name > * {
+    float: left;
+    width: 49%;
+    background-color: #dbdbdb;
+    padding-left: 1rem; }
+
+  span.wpcf7-form-control-wrap.your-email > * {
+    float: right;
+    width: 49%;
+    background-color: #dbdbdb;
+    padding-left: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem; }
+
+  input.wpcf7-form-control.wpcf7-submit {
+    padding: 3rem;
+    margin: 0; }
+
+  input.wpcf7-form-control.wpcf7-submit:hover {
+    padding: 3rem;
+    margin: 0; } }
 @media (min-width: 1024px) and (orientation: landscape) {
   .width_50,
   .width_65 {
