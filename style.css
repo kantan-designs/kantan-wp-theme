@@ -152,18 +152,38 @@ div#about.white-box.col-wrapper {
   border-radius: 50%;
   border: solid 1px #666; }
 
-.left {
-  float: left; }
+div.small-round-pic {
+  float: none; }
 
-.right {
-  float: right; }
+.left-text.width_65.right {
+  width: 80%; }
 
 .bio {
-  padding: 5rem 0 0 0; }
+  padding-top: 3rem; }
 
-.bio ul {
-  padding-left: 0;
-  margin-left: 0; }
+#meet {
+  padding-bottom: 0; }
+
+.small-round-pic {
+  padding-right: 0; }
+
+#momo-text,
+#john-text {
+  float: none;
+  width: 100%; }
+
+#momo-text h5,
+#momo-text h6,
+#momo-text p,
+#momo-text ul,
+#john-text h5,
+#john-text h6,
+#john-text p,
+#john-text ul {
+  text-align: center; }
+
+#john-text {
+  margin-bottom: 5rem; }
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -1318,42 +1338,6 @@ ul.slicknav_nav {
 /*--------------------------------------------------------------
 16.0 Media Queries
 --------------------------------------------------------------*/
-@media (min-width: 1310px) {
-  div.bio.width_55.body-copy {
-    width: 800px; } }
-@media (max-width: 1310px) {
-  div.small-round-pic {
-    float: none; }
-
-  .left-text.width_65.right {
-    width: 80%; }
-
-  .bio {
-    padding-top: 3rem; }
-
-  #meet {
-    padding-bottom: 0; }
-
-  .small-round-pic {
-    padding-right: 0; }
-
-  #momo-text,
-  #john-text {
-    float: none;
-    width: 100%; }
-
-  #momo-text h5,
-  #momo-text h6,
-  #momo-text p,
-  #momo-text ul,
-  #john-text h5,
-  #john-text h6,
-  #john-text p,
-  #john-text ul {
-    text-align: center; }
-
-  #john-text {
-    margin-bottom: 5rem; } }
 @media (max-width: 1024px) {
   .slicknav_menu {
     display: block;
@@ -1723,7 +1707,9 @@ ul.slicknav_nav {
     margin: 3rem 0 3rem 0; } }
 @media (min-width: 1024px) and (orientation: landscape) {
   .width_50,
-  .width_65,
+  .width_65 {
+    width: 900px; }
+
   .width_70 {
     width: 80%; }
 

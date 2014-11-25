@@ -1234,66 +1234,6 @@ ul.slicknav_nav {
 16.0 Media Queries
 --------------------------------------------------------------*/
 
-// For desktop+ screens:
-
-@media (min-width: 1310px) {
-	
-	div.bio.width_55.body-copy {
-		width: 800px;
-	}
-}
-
-
-
-// Break & wrap 'Team' content with width < 1310px:
-
-@media (max-width: 1310px) {
-	
-	div.small-round-pic {
-		float:none;
-	}
-
-	
-	.left-text.width_65.right {
-		width: 80%;
-	}
-
-	.bio {
-		padding-top: 3rem;
-	}
-
-
-	#meet {
-		padding-bottom: 0;
-	}
-
-	.small-round-pic {
-		padding-right: 0;
-	}
-
-
-	#momo-text,  
-	#john-text {
-		float: none;
-		width: 100%;
-	}
-
-	#momo-text h5,
-	#momo-text h6,
-	#momo-text p,
-	#momo-text ul,
-	#john-text h5,
-	#john-text h6,
-	#john-text p,
-	#john-text ul {
-		text-align: center;
-	}
-
-	#john-text {
-		margin-bottom: 5rem;
-	}
-}
-
 
 
 
@@ -1713,7 +1653,6 @@ ul.slicknav_nav {
 		margin-left: -2.5rem;
 	}
 
-
 	.step-ribbon {
 		position: absolute;
 		width: 125px;
@@ -1749,7 +1688,10 @@ ul.slicknav_nav {
 
 @media (min-width: 1024px) and (orientation: landscape) {
 	.width_50,
-	.width_65,
+	.width_65 {
+		width: 900px;
+	}
+
 	.width_70 {
 		width: 80%;
 	}
@@ -1759,7 +1701,6 @@ ul.slicknav_nav {
 	#big-blue-button h2 {
 		font-size: $h1_size * 0.8;
 	}
-
 
 	#big-orange-button,
 	#big-red-button,
@@ -1772,6 +1713,7 @@ ul.slicknav_nav {
 		margin: 3rem 0 1rem 0;
 	}
 }
+
 
 
 // Extra for troubleshooting layout: 
