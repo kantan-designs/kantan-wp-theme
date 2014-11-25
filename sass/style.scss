@@ -1169,7 +1169,7 @@ ul.slicknav_nav {
 #big-red-button:hover {
 	border: solid 1px darken(#EB0000, 10%);
 	@include gradient(#EB0000,(top, lighten(#EB0000, 10%), darken(#EB0000, 5%) ));
-	padding: 3rem;
+	padding: 3rem;	
 	margin: 3rem 0 3rem 0;
 	@include border-radius(5px);
 	text-align: center;
