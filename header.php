@@ -21,16 +21,24 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo get_bloginfo('template_url') ?>/css/all-ie-only.css" />
 <![endif]-->
 
-<!--[if lt IE 9]>
-   	<script>
-      document.createElement('header');
-      document.createElement('nav');
-      document.createElement('section');
-      document.createElement('article');
-      document.createElement('aside');
-      document.createElement('footer');
-   	</script>
-	<![endif]-->
+<meta name="google-site-verification" content="hklJh07OEqeUL-RwPamy0y7bQAdyMUmbcs1aQewT9YY" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56615055-1', 'auto');
+
+  ga('require', 'displayfeatures');
+  ga('require', 'linkid', 'linkid.js');
+
+  ga('send', 'pageview');
+
+</script>
+
+
 </head>
 
 <body <?php body_class(); ?>>

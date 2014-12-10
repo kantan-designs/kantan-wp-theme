@@ -21,5 +21,128 @@
 
 <?php wp_footer(); ?>
 
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="<?php echo get_bloginfo('template_url') ?>/js/jquery.slicknav.js"></script>
+	
+
+	
+<script>
+
+// Initialize jquery transitions and slicknav menu: 
+
+// Remove min-height on iOS after fullscreen initialization
+
+$(document).ready(function () {
+	
+	// initialize slicknav: 
+
+	$('#menu-kantan-main').slicknav({
+	prependTo:'#site-navigation',
+	closeOnClick: 'true'
+	});
+
+	// get collapsed nav height to use for Jquery scroll later: 
+
+	var navHeight = $("#site-navigation").height();
+	
+
+	$(".logo").click(function (event){
+		event.preventDefault();
+
+		 $('html, body').animate({
+		 	scrollTop: 0
+		}, 'slow');
+	});
+
+	// add appearance of nav background color on scroll:
+
+	$(window).scroll(function () {
+    if ($(document).scrollTop() > 100) {
+        $("#site-navigation").addClass("scrolled");
+    	}   
+	});
+
+	// make sure nav background is opaque on small screens: 
+
+	$(".slicknav_menu").click(function (event){
+		event.preventDefault();
+		$("#site-navigation").addClass("scrolled");
+    });
+
+
+	
+
+	// Fade in subhead and color in 'yes' button:
+
+	$(window).load(function() {
+
+		$("#yes_button").delay(500).queue(function(){
+			$(this).addClass("opaque");
+		});	
+
+		$("#hero_how, #hero_arrow").delay(500).queue(function(next){
+			$(this).addClass("opaque");
+			next();
+		});
+
+	});
+
+	// add animate.css to desktop browsers only:
+
+	$("#yes_button").delay(500).queue(function(){
+			$(this).addClass("opaque animated tada");
+		});
+
+	 
+
+
+	// Jquery scroll for slicknav menu items: 
+
+	$(".menu-item-1761, #hero_arrow").click(function (event){
+		event.preventDefault();
+
+		 $('html, body').stop(true,true).animate({
+		 	scrollTop: $("#about").offset().top - navHeight + 10
+		}, "slow" );
+	});
+
+	$(".menu-item-1737").click(function (event){
+		event.preventDefault();
+
+		 $('html, body').stop(true,true).animate({
+		 	scrollTop: $("#our-services").offset().top - navHeight + 10 
+		}, 'slow');
+	});
+
+
+	$(".menu-item-1738").click(function (event){
+		event.preventDefault();
+
+		 $('html, body').stop(true,true).animate({
+		 	scrollTop: $("#meet").offset().top - navHeight + 10
+		}, 'slow');
+	});
+
+	var adjustsmall = 0; 
+
+		if ($(window).width() < 650) {
+			adjustsmall = 60
+		}
+		else {
+			adjustsmall = 0
+		}
+
+	$(".menu-item-1740").click(function (event){
+		event.preventDefault();
+
+		 $('html, body').stop(true,true).animate({
+		 	scrollTop: $("#get-in-touch").offset().top - navHeight - 50 + adjustsmall
+		}, 'slow');
+	});
+
+});
+</script>
+
 </body>
 </html>
