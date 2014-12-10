@@ -914,7 +914,7 @@ ul.slicknav_nav > * {
   display: block; }
 
 .hentry {
-  margin: 0 0 1.5em; }
+  margin: 10rem 0 1.5rem 0; }
 
 .byline,
 .updated:not(.published) {
