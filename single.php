@@ -8,22 +8,26 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main package-background background col-wrapper" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+			<div class="opacity_95 white-box width_65 package lower-text-area">
 
-			<?php get_template_part( 'content', 'single' ); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php kantan_post_nav(); ?>
+					<?php get_template_part( 'content', 'single' ); ?>
 
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
+					<?php kantan_post_nav(); ?>
 
-		<?php endwhile; // end of the loop. ?>
+					<?php
+						// If comments are open or we have at least one comment, load up the comment template
+						if ( comments_open() || '0' != get_comments_number() ) :
+							comments_template();
+						endif;
+					?>
+
+				<?php endwhile; // end of the loop. ?>
+
+			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
