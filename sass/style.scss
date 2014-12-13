@@ -597,6 +597,61 @@ input.wpcf7-form-control.wpcf7-submit:hover {
     color: #666;
 }
 
+.subscribe {
+	padding-left:2rem;
+	padding-right:2rem;
+	margin-top: 2rem;
+	width: 100%;
+	background: #F7F9Fb;
+}
+
+.subscribe h5 {
+	text-align: left;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+
+
+.subscribe input {
+	margin-top: 1rem;
+	width: 33%
+
+}
+
+.subscribe button {
+	font-weight: bold;
+	color: #FFF;
+	width: 30%;
+	border: solid 1px darken(#ED7238, 10%);
+	@include gradient(#ED7238,(top, lighten(#ED7238, 5%), darken(#ED7238, 10%) ));
+	// padding: 1.5rem;
+	margin: 0 0 1.5rem 0;
+	@include border-radius(5px);
+}
+
+.subscribe button:hover {
+	font-weight: bold;
+	color: #FFF;
+	width: 30%;
+	border: solid 1px darken(#ED7238, 10%);
+	@include gradient(#ED7238,(top, lighten(#ED7238, 10%), darken(#ED7238, 5%) ));
+	// padding: 1.5rem;
+	margin: 0 0 1.5rem 0;
+	@include border-radius(5px);
+}
+
+@media (max-width: 1000px) {
+	.subscribe input {
+		width: 49%;
+	}
+	.subscribe button,
+	.subscribe button:hover {
+		margin-top: 2rem;
+		width: 99%;
+	}
+}
+
 
 
 /*--------------------------------------------------------------
