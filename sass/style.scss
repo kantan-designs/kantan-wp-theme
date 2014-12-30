@@ -23,7 +23,6 @@ and Blueprint http://www.blueprintcss.org/
 
 
 //import custom partials: 
-
 @import "_partials/all";
 
 /*--------------------------------------------------------------
@@ -153,6 +152,16 @@ a img {
 /*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
+
+
+body {
+  background-color: white;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+}
+
 body,
 button,
 input,
@@ -162,108 +171,40 @@ textarea {
 	color: $black;
 }
 
-p,
-li:not(.menu-item) {
-	font-family: "PT Sans", sans-serif;
-}
+// from type-scale.com - augmented fourth scale, weight 700:
 
-.blog p,
-.single p,
-.archive p {
-	text-align: left;
-}
-
-.blog ul,
-.single ul,
-.archive ul {
-	margin-left: 2.5rem;
-	list-style: disc;
-	text-align: left;
-}
-
-.blog ol,
-.single ol,
-.archive ol {
-	margin-left: 2.5rem;
-	list-style: decimal;
-	text-align: left;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
- {	font-family: "PT Sans", sans-serif;
-	font-weight: $h1_weight;
-	font-size: $h1_size;
-	color: $white;
-}
-
-.blog h1 {
-	line-height: 1.2;
-}
-
-.blog h2 {
-	line-height: 1.3;
-	font-size: $h1_size * 0.8;
-	padding-bottom: 1rem;
-}
-
-.blog h3 {
-	color: $black;
-	font-size: $h1_size * 0.6;
-	font-weight: bold;
-	padding-bottom: 1.8rem;
-}
-
-.blog h4,
-.blog h5 {
-	color: $black;
-	padding-bottom: 2rem;
-
-}
-
-h2 {
-	line-height: 1.2;
-	color: $black;
-}
-
-h3 {
-	font-size: $h1_size * 0.53;
-	line-height: 1.2;
-	font-weight: normal; 
-}
-
-h4,
-h5 {
-	font-size: 2.7rem;
-	line-height: 1.2;
-	font-weight: normal; 
-}
-
-h5 {
-	color: $black;
-	font-weight: bold; 
-
-}
-
-h6 {
-	font-size: 2.0rem;
-	line-height: 1.2;
-	font-weight: normal; 
-	color: $black;
-
-}
-
-
-
-// h2:not(.site-description),
 p, 
 ul {
-	padding-bottom: 2rem;
+	margin-bottom: 1.3em;
 }
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: 700; 
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 5.5rem;
+}
+
+// h2 {font-size: 2.827em;} 
+
+// h2 {font-size: 1.999em;}
+
+h2 {font-size: 1.414em;}
+
+h3 {font-size: 1em;}
+
+small, .font_small {font-size: 0.707em;}
+
+// end type-scale injection. 
+
+h2, h3, h4 {
+  	text-align: left;
+}
+
 
 b,
 strong {
@@ -346,13 +287,139 @@ sub {
 	top: .5ex;
 }
 
-small {
-	font-size: 75%;
-}
+// small {
+// 	font-size: 75%;
+// }
 
 big {
 	font-size: 125%;
 }
+
+time {
+	font-size: 1.3em;
+}
+
+// homepage-specific typography: 
+
+.home > * {
+	p,
+	li:not(.menu-item) {
+		font-family: "PT Sans", sans-serif;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {	
+		font-family: "PT Sans", sans-serif;
+		font-weight: $h1_weight;
+		font-size: $h1_size;
+		color: $white;
+		text-align:center;
+	}
+
+	h2 {
+		margin: 0 0 0 0;
+		line-height: 1.2;
+		color: $black;
+	}
+
+	h3 {
+		margin: 0 0 0 0;
+		font-size: $h1_size * 0.53;
+		line-height: 1.2;
+		font-weight: bold; 
+		color: #333;
+	}
+
+	h4,
+	h5 {
+		font-size: 2.7rem;
+		line-height: 1.2;
+		font-weight: normal; 
+	}
+
+	h5 {
+		color: $black;
+		font-weight: bold; 
+
+	}
+
+	h6 {
+		font-size: 2.0rem;
+		line-height: 1.2;
+		font-weight: normal; 
+		color: $black;
+		margin-bottom: 1.3em;
+	}
+
+	.h2_copy h2 {
+		margin-bottom: 2.0rem;
+		text-align: left;
+	}
+
+	#about h2,
+	#meet h2 {
+		margin-bottom: 2.0rem;
+		text-align: center;
+	}
+
+	#about p {
+		margin-top: 1em;
+	}
+}
+
+// blog content-specific typography: 
+
+.blog > *,
+.single > *,
+.archive > * {
+
+	p {
+		text-align: left;
+	}
+
+	ul {
+		margin-left: 2.5rem;
+		list-style: disc;
+		text-align: left;
+	}
+
+	ol {
+		margin-left: 2.5rem;
+		list-style: decimal;
+		text-align: left;
+	}
+
+	
+}
+
+
+.error404 > *,
+.archive > *,
+.search {
+
+	.page-header {
+		margin-top: 4rem;
+	}
+	h2 {
+		text-align: center;
+	}
+}
+
+#footer {
+		text-align:center;
+	}	
+
+
+
+
+
+
+
+
 
 /*--------------------------------------------------------------
 3.0 Elements
@@ -364,10 +431,10 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-ul,
-ol {
-	margin: 0;
-}
+// ul,
+// ol {
+// 	margin: 0;
+// }
 
 ul {
 	list-style: none;
@@ -394,13 +461,16 @@ dd {
 }
 
 img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
 }
 
-figure {
-	margin: 0;
-}
+// figure {
+// 	margin: 0;
+// }
 
 table {
 	background: $text-shading;
@@ -416,6 +486,9 @@ th, td {
 	padding: 1rem 1rem;
 }
 
+.entry-meta {
+	margin-bottom: 1em;
+}
 
 
 /*--------------------------------------------------------------
@@ -552,7 +625,7 @@ span.wpcf7-form-control-wrap.your-email > * {
 	padding-left: 1rem;
 }
 
-.wpcf7-not-valid-tip {
+span.wpcf7-not-valid-tip {
 	display: none;
 }
 
@@ -597,59 +670,145 @@ input.wpcf7-form-control.wpcf7-submit:hover {
     color: #666;
 }
 
-.subscribe {
-	padding-left:2rem;
-	padding-right:2rem;
-	margin-top: 2rem;
+.cta-box {
+	margin-top: 7rem;
 	width: 100%;
 	background: #F7F9Fb;
-}
-
-.subscribe h5 {
+	border: solid 1px #ccc;
+	@include border-radius(3px);
 	text-align: left;
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+}
+
+.cta-box > * {
+	vertical-align: top;
+	padding: 0 2rem;
+
+}
+
+.cta-box h2 {
+	margin-top: 0; 
+}
+
+.subscribe-cta {
+	display: inline-block;
+	border-right: 1px solid #ccc;
+	width: 65%;
+	text-align: left;
+	margin: 2rem 0 2rem 0; 
+}
+
+hr.mobile-only {
+		display: none;
+		margin-top: 2rem;
+		margin-bottom: 0;
+	}
+
+
+.service-cta {
+	display: inline-block;
+	width: 35%;
+	margin: 2rem 0 2rem 0;
 }
 
 
-
-.subscribe input {
+.cta-box input {
+	padding: 1rem;
 	margin-top: 1rem;
-	width: 33%
-
+	width: 60%;
+	@include border-radius(5px);
 }
 
-.subscribe button {
+.cta-box button {
+	display:inline-block;
+	vertical-align: top;
+	width: 35%;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin: 1rem 1rem 1rem 1rem;
+	font-size: 2rem;
 	font-weight: bold;
 	color: #FFF;
-	width: 30%;
 	border: solid 1px darken(#ED7238, 10%);
 	@include gradient(#ED7238,(top, lighten(#ED7238, 5%), darken(#ED7238, 10%) ));
-	// padding: 1.5rem;
-	margin: 0 0 1.5rem 0;
 	@include border-radius(5px);
+
 }
 
-.subscribe button:hover {
-	font-weight: bold;
-	color: #FFF;
-	width: 30%;
-	border: solid 1px darken(#ED7238, 10%);
+.cta-box button:hover {
 	@include gradient(#ED7238,(top, lighten(#ED7238, 10%), darken(#ED7238, 5%) ));
-	// padding: 1.5rem;
-	margin: 0 0 1.5rem 0;
 	@include border-radius(5px);
 }
 
-@media (max-width: 1000px) {
-	.subscribe input {
-		width: 49%;
+
+@media (max-width: 1025px) {
+	
+	.cta-box {
+		margin-top: 7rem;
+		width: 100%;
+		background: #F7F9Fb;
+		border: solid 1px #ccc;
+		@include border-radius(3px);
+		text-align: left;
 	}
-	.subscribe button,
-	.subscribe button:hover {
-		margin-top: 2rem;
-		width: 99%;
+
+	.cta-box > * {
+		vertical-align: top;
+		padding: 0 2rem;
+
 	}
+
+	.cta-box h2 {
+		margin-top: 0; 
+	}
+
+	.subscribe-cta {
+		display: block;
+		border-right: none;
+		width: 100%;
+		text-align: left;
+		margin: 2rem 0rem 2rem 0rem; 
+	}
+
+	hr.mobile-only {
+		display: block;
+	}
+
+	.service-cta {
+		display: block;
+		width: 100%;
+		padding: 0rem 2rem 1rem;
+		margin-bottom: 0;
+	}
+
+
+	.cta-box input {
+		padding: 1rem;
+		margin-top: 1rem;
+		width: 100%;
+		@include border-radius(5px);
+	}
+
+	.cta-box button {
+		display:inline-block;
+		vertical-align: top;
+		width: 100%;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		margin: 1rem 1rem 1rem 0rem;
+		font-size: 2rem;
+		font-weight: bold;
+		color: #FFF;
+		border: solid 1px darken(#ED7238, 10%);
+		@include gradient(#ED7238,(top, lighten(#ED7238, 5%), darken(#ED7238, 10%) ));
+		@include border-radius(5px);
+
+	}
+
+	.cta-box button:hover {
+		@include gradient(#ED7238,(top, lighten(#ED7238, 10%), darken(#ED7238, 5%) ));
+		@include border-radius(5px);
+	}
+	
 }
 
 
@@ -662,19 +821,20 @@ input.wpcf7-form-control.wpcf7-submit:hover {
 --------------------------------------------------------------*/
 
 
-a:visited {
-	color: #00426E;
-}
-
 a {
 	color: #1183CF;
 	text-decoration: none;
 }
 
 a:hover,
-a:focus,
-a:active {
-	color: #1183CF;
+a:active,
+a:focus {
+	color: #4CAAC3;
+}
+
+
+a:visited {
+	color: #0C65A1;
 }
 
 /* remove link colors for headers */
@@ -693,6 +853,8 @@ h1 a:active {
 .nav-links {
 	display:none;
 }
+
+
 
 /*--------------------------------------------------------------
 5.2 Menus
@@ -842,6 +1004,8 @@ ul.slicknav_nav > * {
 .slicknav_menu {
 	float: right;	
 }
+
+
 
 /*--------------------------------------------------------------
 6.0 Accessibility
@@ -1290,6 +1454,7 @@ ul.slicknav_nav {
 
 #hero_how.opaque {
 	color: rgba(255,255,255,1);
+	font-weight: normal;
 }
 
 #hero_arrow {
@@ -1460,39 +1625,47 @@ ul.slicknav_nav {
 		border: solid 3px #fff;
 	}
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6
- 	{
-		font-size: $h1_size / 1.75;
+	.home > *,
+	.blog > *,
+	.single > *,
+	.archive > * {
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6
+	 	{
+			font-size: $h1_size / 1.75;
+		}
+
+		h2 {
+			font-size: $h1_size / 2;	
+		}
+
+		h3 {
+			font-size: $h1_size / 3;
+		}
+
+		h4,
+		h5 {
+			font-size: $h1_size / 3.25;
+			margin-bottom: 0.5rem;
+		}
+
+		h6 {
+			font-size: $h1_size / 3.5;
+			margin-bottom: 1rem;
+		}
+
+		p, 
+		ul li {
+			font-size: $h1_size / 4;	
+		}
 	}
 
-	h2 {
-		font-size: $h1_size / 2;	
-	}
-
-	h3 {
-		font-size: $h1_size / 3;
-	}
-
-	h4,
-	h5 {
-		font-size: $h1_size / 3.25;
-		margin-bottom: 0.5rem;
-	}
-
-	h6 {
-		font-size: $h1_size / 3.5;
-		margin-bottom: 1rem;
-	}
-
-	p, 
-	ul li {
-		font-size: $h1_size / 4;	
-	}
+	
 
 
 	.width_65,
@@ -1676,41 +1849,44 @@ ul.slicknav_nav {
 	#yes_button {
 		border: solid 3px #fff;
 	}
+	.blog > *,
+	.single > *,
+	.archive > *,
+	.home > * {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6
+	 	{
+			font-size: $h1_size / 1.75;
+		}
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6
- 	{
-		font-size: $h1_size / 1.75;
+		h2 {
+			font-size: $h1_size / 2;	
+		}
+
+		h3 {
+			font-size: $h1_size / 3;
+		}
+
+		h4,
+		h5 {
+			font-size: $h1_size / 3.25;
+			margin-bottom: 0.5rem;
+		}
+
+		h6 {
+			font-size: $h1_size / 3.5;
+			margin-bottom: 1rem;
+		}
+
+		p, 
+		ul li {
+			font-size: $h1_size / 4;	
+		}
 	}
-
-	h2 {
-		font-size: $h1_size / 2;	
-	}
-
-	h3 {
-		font-size: $h1_size / 3;
-	}
-
-	h4,
-	h5 {
-		font-size: $h1_size / 3.25;
-		margin-bottom: 0.5rem;
-	}
-
-	h6 {
-		font-size: $h1_size / 3.5;
-		margin-bottom: 1rem;
-	}
-
-	p, 
-	ul li {
-		font-size: $h1_size / 4;	
-	}
-
 
 	.width_65,
 	.width_50, 
@@ -1853,38 +2029,44 @@ ul.slicknav_nav {
 		border: solid 5px #fff;
 	}
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6
- 		{
-		font-size: $h1_size;	
-	}
+	.home > *,
+	.blog > *,
+	.single > *,
+	.archive > * {
 
-	h2 {
-		font-size: $h1_size * 0.8;	
-	}
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6
+	 		{
+			font-size: $h1_size;	
+		}
 
-	h3 {
-		font-size: $h1_size * 0.45;
-	}
+		h2 {
+			font-size: $h1_size * 0.8;	
+		}
 
-	h4,
-	h5 {
-		font-size: 2.7rem;
-		margin-bottom: 0.5rem;
-	}
+		h3 {
+			font-size: $h1_size * 0.45;
+		}
 
-	h6 {
-		font-size: 2.0rem;
-		margin-bottom: 1rem;
-	}
+		h4,
+		h5 {
+			font-size: 2.7rem;
+			margin-bottom: 0.5rem;
+		}
 
-	p, 
-	ul li {
-		font-size: 2.0rem;
+		h6 {
+			font-size: 2.0rem;
+			margin-bottom: 1rem;
+		}
+
+		p, 
+		ul li {
+			font-size: 2.0rem;
+		}
 	}
 
 	.blue-box-copy h6:before {

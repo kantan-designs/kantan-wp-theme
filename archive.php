@@ -20,10 +20,14 @@ get_header(); ?>
 						<h1 class="page-title">
 							<?php
 								if ( is_category() ) :
+									_e( 'On ');
 									single_cat_title();
+									_e( '...');
 
 								elseif ( is_tag() ) :
+									_e( 'On ');
 									single_tag_title();
+									_e( '...');
 
 								elseif ( is_author() ) :
 									printf( __( 'Author: %s', 'kantan' ), '<span class="vcard">' . get_the_author() . '</span>' );

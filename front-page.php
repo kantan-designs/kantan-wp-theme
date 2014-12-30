@@ -23,7 +23,7 @@ get_header(); ?>
 
 		<div class="col-wrapper">
 			<!-- "You don't just want a "pretty" ...  -->
-			<div id="about" class="white-box col-wrapper">
+			<div id="about" class="anchor white-box col-wrapper">
 				
 				<div class="width_65 h2_copy">
 					<?php the_field('section'); ?>
@@ -176,13 +176,13 @@ get_header(); ?>
 			<div class="background col-wrapper" style="background-image:url('<?php echo get_bloginfo('template_url') ?>/images/get-in-touch-background@2px.png');" data-img-width="1600" data-img-height="1064">
 				<img id="point2" src="<?php echo get_bloginfo('template_url') ?>/images/white-point.png" alt="section separator">
 
-				<div class="h2_copy">		
+				<div id="get-in-touch" class="h2_copy">		
 					<?php the_field('get-in-touch'); ?>
 				</div>
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	</div>
+	</div>ß
 	
 	
 </div>
@@ -195,22 +195,35 @@ get_header(); ?>
 	
 	<script>
 
-	// Initialize jquery transitions and slicknav menu: 
-
-	// Remove min-height on iOS after fullscreen initialization
+	
+	
 
 	$(document).ready(function () {
-		
-		// initialize slicknav: 
-
-		$('#menu-kantan-main').slicknav({
-		prependTo:'#site-navigation',
-		closeOnClick: 'true'
-		});
 
 		// get collapsed nav height to use for Jquery scroll later: 
-
 		var navHeight = $("#site-navigation").height();
+
+		// Check the current URL on page load to see if a hash was passed
+
+		var windowScrollTop = 0;
+		setTimeout(function(){
+			windowScrollTop = $(document).scrollTop();
+			console.log(windowScrollTop);
+
+			if ( window.location.hash ) {
+				var anchor = location.hash;
+				pos = $(anchor).position().top;
+				console.log(anchor, pos);
+				$(document).scrollTop(windowScrollTop-navHeight+10);
+			};
+		}, 0);
+	
+		
+		// initialize slicknav: 
+		$('#menu-kantan-main').slicknav({
+			prependTo:'#site-navigation',
+			closeOnClick: 'true'
+		});
 		
 
 		$(".logo").click(function (event){
@@ -293,21 +306,29 @@ get_header(); ?>
 		var adjustsmall = 0; 
 
   		if ($(window).width() < 650) {
-  			adjustsmall = 60
+  			adjustsmall = 100
   		}
   		else {
   			adjustsmall = 0
   		}
 
+  		var site_url = "<?php echo site_url(); ?>";
+
+  		$(".menu-item-1812").click(function (event){
+  			location.assign(site_url+"/blog");
+  			return true;
+		});
+
 		$(".menu-item-1740").click(function (event){
 			event.preventDefault();
 
 			 $('html, body').stop(true,true).animate({
-			 	scrollTop: $("#get-in-touch").offset().top - navHeight - 50 + adjustsmall
+			 	scrollTop: $("#get-in-touch").offset().top - navHeight + adjustsmall
     		}, 'slow');
 		});
-
+	
 	});
+	
 	</script>
 
 	

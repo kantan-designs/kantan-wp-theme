@@ -12,7 +12,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<p><small>&copy; 2014 Kantan Designs.</small></p>
+			<p id="footer"><small>&copy; 2014 Kantan Designs.</small></p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
@@ -63,10 +63,46 @@ $(document).ready(function () {
     });
 
 
+    // Jquery scroll for slicknav menu items: 
+
+  	var site_url = "<?php echo site_url(); ?>";
+
+
+	$(".menu-item-1761").click(function (event){
+		location.assign(site_url+"#about");
+	});
+
+	$(".menu-item-1737").click(function (event){
+		location.assign(site_url+"#our-services");
+	});
+
+
+	$(".menu-item-1738").click(function (event){
+		location.assign(site_url+"#meet");
+	});
+
+	var adjustsmall = 0; 
+
+		if ($(window).width() < 650) {
+			adjustsmall = 60
+		}
+		else {
+			adjustsmall = 0
+		}
+
+
+	$(".menu-item-1812").click(function (event){
+		location.assign(site_url+"/blog");
+	});
+
+	$(".menu-item-1740").click(function (event){
+		location.assign(site_url+"#get-in-touch");
+	});
 
 
 
 });
+
 </script>
 
 </body>
