@@ -57,7 +57,7 @@ and Blueprint http://www.blueprintcss.org/
   width: 100%; }
 
 .white-box {
-  background-color: white; }
+  background-color: #ffffff; }
 
 .opacity_95 {
   opacity: 0.95; }
@@ -66,6 +66,32 @@ and Blueprint http://www.blueprintcss.org/
   display: none; }
 
 /* background setup */
+.radial-center-blue {
+  /* fallback */
+  background-color: #4B99BD;
+  /* Safari 4-5, Chrome 1-9 */
+  /* Can't specify a percentage size? Laaaaaame. */
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#4B99BD), to(#255279));
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-radial-gradient(circle, #4B99BD, #255279);
+  /* Firefox 3.6+ */
+  background: -moz-radial-gradient(circle, #4B99BD, #255279);
+  /* IE 10 */
+  background: -ms-radial-gradient(circle, #4B99BD, #255279); }
+
+.radial-center-red {
+  /* fallback */
+  background-color: #E54C37;
+  /* Safari 4-5, Chrome 1-9 */
+  /* Can't specify a percentage size? Laaaaaame. */
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#E54C37), to(#D22637));
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-radial-gradient(circle, #E54C37, #D22637);
+  /* Firefox 3.6+ */
+  background: -moz-radial-gradient(circle, #E54C37, #D22637);
+  /* IE 10 */
+  background: -ms-radial-gradient(circle, #E54C37, #D22637); }
+
 .fullscreen {
   height: 100vh; }
 
@@ -120,7 +146,7 @@ div#about.white-box.col-wrapper {
   margin-top: 12.0rem; }
 
 .services_body {
-  color: white;
+  color: #ffffff;
   padding-top: 0; }
 
 .package {
@@ -322,7 +348,7 @@ textarea {
   font-size: 20px;
   font-size: 2.0rem;
   line-height: 1.5;
-  color: #333333; }
+  color: #333; }
 
 p,
 ul {
@@ -435,12 +461,12 @@ time {
   font-family: "PT Sans", sans-serif;
   font-weight: bold;
   font-size: 5.5rem;
-  color: white;
+  color: #ffffff;
   text-align: center; }
 .home > * h2 {
   margin: 0 0 0 0;
   line-height: 1.2;
-  color: #333333; }
+  color: #333; }
 .home > * h3 {
   margin: 0 0 0 0;
   font-size: 2.915rem;
@@ -453,13 +479,13 @@ time {
   line-height: 1.2;
   font-weight: normal; }
 .home > * h5 {
-  color: #333333;
+  color: #333;
   font-weight: bold; }
 .home > * h6 {
   font-size: 2.0rem;
   line-height: 1.2;
   font-weight: normal;
-  color: #333333;
+  color: #333;
   margin-bottom: 1.3em; }
 .home > * .h2_copy h2 {
   margin-bottom: 2.0rem;
@@ -537,7 +563,7 @@ img {
   /* Adhere to container width. */ }
 
 table {
-  background: #f7f9fb;
+  background: #F7F9FB;
   width: 100%;
   margin-bottom: 2rem; }
 
@@ -683,7 +709,7 @@ input.wpcf7-form-control.wpcf7-submit {
   width: 100%;
   color: #fff;
   border: solid 1px #b80000;
-  background-color: #eb0000;
+  background-color: #EB0000;
   /* fallback color if gradients are not supported */
   background-image: -webkit-linear-gradient(top, #ff0505, #b80000);
   /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
@@ -705,7 +731,7 @@ input.wpcf7-form-control.wpcf7-submit:hover {
   width: 100%;
   color: #fff;
   border: solid 1px #b80000;
-  background-color: #eb0000;
+  background-color: #EB0000;
   /* fallback color if gradients are not supported */
   background-image: -webkit-linear-gradient(top, #ff1f1f, #d20000);
   /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
@@ -789,7 +815,7 @@ hr.mobile-only {
   font-weight: bold;
   color: #FFF;
   border: solid 1px #de5514;
-  background-color: #ed7238;
+  background-color: #ED7238;
   /* fallback color if gradients are not supported */
   background-image: -webkit-linear-gradient(top, #ef834f, #de5514);
   /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
@@ -804,7 +830,7 @@ hr.mobile-only {
   border-radius: 5px; }
 
 .cta-box button:hover {
-  background-color: #ed7238;
+  background-color: #ED7238;
   /* fallback color if gradients are not supported */
   background-image: -webkit-linear-gradient(top, #f19367, #eb6121);
   /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
@@ -871,7 +897,7 @@ hr.mobile-only {
     font-weight: bold;
     color: #FFF;
     border: solid 1px #de5514;
-    background-color: #ed7238;
+    background-color: #ED7238;
     /* fallback color if gradients are not supported */
     background-image: -webkit-linear-gradient(top, #ef834f, #de5514);
     /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
@@ -886,7 +912,7 @@ hr.mobile-only {
     border-radius: 5px; }
 
   .cta-box button:hover {
-    background-color: #ed7238;
+    background-color: #ED7238;
     /* fallback color if gradients are not supported */
     background-image: -webkit-linear-gradient(top, #f19367, #eb6121);
     /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
@@ -944,7 +970,8 @@ h1 a:active {
   -o-transition: background-color 300ms linear;
   /* Opera 12+ */
   transition: background-color 300ms linear;
-  /* IE 10+, Fx 29+ */ }
+  /* IE 10+, Fx 29+ */
+  -webkit-transform: translateZ(0); }
 
 #site-navigation.scrolled {
   background-color: #4b99bd; }
@@ -1159,7 +1186,7 @@ article.hentry {
 .blog h1,
 .single h1,
 .archive h1 {
-  color: #333333; }
+  color: #333; }
 
 .byline,
 .updated:not(.published) {
@@ -1254,6 +1281,9 @@ article footer {
 embed,
 iframe,
 object {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 100%; }
 
 /*--------------------------------------------------------------
@@ -1461,7 +1491,7 @@ ul.slicknav_nav {
 
 #big-orange-button {
   border: solid 1px #de5514;
-  background-color: #ed7238;
+  background-color: #ED7238;
   /* fallback color if gradients are not supported */
   background-image: -webkit-linear-gradient(top, #ef834f, #de5514);
   /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
@@ -1480,7 +1510,7 @@ ul.slicknav_nav {
 
 #big-orange-button:hover {
   border: solid 1px #de5514;
-  background-color: #ed7238;
+  background-color: #ED7238;
   /* fallback color if gradients are not supported */
   background-image: -webkit-linear-gradient(top, #f19367, #eb6121);
   /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
@@ -1499,7 +1529,7 @@ ul.slicknav_nav {
 
 #big-red-button {
   border: solid 1px #b80000;
-  background-color: #eb0000;
+  background-color: #EB0000;
   /* fallback color if gradients are not supported */
   background-image: -webkit-linear-gradient(top, #ff0505, #b80000);
   /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
@@ -1518,7 +1548,7 @@ ul.slicknav_nav {
 
 #big-red-button:hover {
   border: solid 1px #b80000;
-  background-color: #eb0000;
+  background-color: #EB0000;
   /* fallback color if gradients are not supported */
   background-image: -webkit-linear-gradient(top, #ff1f1f, #d20000);
   /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
@@ -1586,7 +1616,7 @@ ul.slicknav_nav {
   font-family: 'Fontawesome';
   font-size: 2.2rem;
   padding-right: 0.6rem;
-  color: #69d2e7;
+  color: #69D2E7;
   content: '\f058'; }
 
 #package1 li:before {
@@ -1723,7 +1753,7 @@ ul.slicknav_nav {
     font-family: 'Fontawesome';
     font-size: 1.57143rem;
     padding-right: 0.6rem;
-    color: #69d2e7;
+    color: #69D2E7;
     content: '\f058'; }
 
   #package1 li:before {
@@ -1929,7 +1959,7 @@ ul.slicknav_nav {
     font-family: 'Fontawesome';
     font-size: 1.57143rem;
     padding-right: 0.6rem;
-    color: #69d2e7;
+    color: #69D2E7;
     content: '\f058'; }
 
   #package1 li:before {
@@ -2103,7 +2133,7 @@ ul.slicknav_nav {
     font-family: 'Fontawesome';
     font-size: 2.2rem;
     padding-right: 0.6rem;
-    color: #69d2e7;
+    color: #69D2E7;
     content: '\f058'; }
 
   #package1 li:before {
@@ -2210,3 +2240,5 @@ ul.slicknav_nav {
     margin: 3rem 0 1rem 0; } }
 .border {
   border: solid 1px red; }
+
+/*# sourceMappingURL=style.css.map */

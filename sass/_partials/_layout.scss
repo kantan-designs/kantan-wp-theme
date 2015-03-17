@@ -84,6 +84,45 @@ display:none;
     width:100%;
 }
 
+.radial-center-blue {
+  /* fallback */
+  background-color: #4B99BD;
+
+
+  /* Safari 4-5, Chrome 1-9 */
+  /* Can't specify a percentage size? Laaaaaame. */
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#4B99BD), to(#255279));
+
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-radial-gradient(circle, #4B99BD, #255279);
+
+  /* Firefox 3.6+ */
+  background: -moz-radial-gradient(circle, #4B99BD, #255279);
+
+  /* IE 10 */
+  background: -ms-radial-gradient(circle, #4B99BD, #255279);
+
+}
+
+.radial-center-red {
+  /* fallback */
+  background-color: #E54C37;
+
+  /* Safari 4-5, Chrome 1-9 */
+  /* Can't specify a percentage size? Laaaaaame. */
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#E54C37), to(#D22637));
+
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-radial-gradient(circle, #E54C37, #D22637);
+
+  /* Firefox 3.6+ */
+  background: -moz-radial-gradient(circle, #E54C37, #D22637);
+
+  /* IE 10 */
+  background: -ms-radial-gradient(circle, #E54C37, #D22637);
+
+}
+
 
 .fullscreen {
     height:100vh;

@@ -12,7 +12,7 @@ get_header(); ?>
 
 <div class="content-area">
 	<main class="site-main" role="main">
-		<div class="background col-wrapper fullscreen" style="background-image:url('<?php echo get_bloginfo('template_url') ?>/images/hero-background.png');" data-img-width="1600" data-img-height="1064">
+		<div id="hero" class="radial-center-blue col-wrapper fullscreen">
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part( 'content', 'page' ); ?>
@@ -173,17 +173,17 @@ get_header(); ?>
 					
 			</div>
 
-			<div class="background col-wrapper" style="background-image:url('<?php echo get_bloginfo('template_url') ?>/images/get-in-touch-background@2px.png');" data-img-width="1600" data-img-height="1064">
+			<div class="col-wrapper radial-center-red">
 				<img id="point2" src="<?php echo get_bloginfo('template_url') ?>/images/white-point.png" alt="section separator">
 
 				<div id="get-in-touch" class="h2_copy">		
 					<?php the_field('get-in-touch'); ?>
 				</div>
 			</div>
-		</main><!-- #main -->
+		</div>
+	</main><!-- #main -->
 	</div><!-- #primary -->
-	</div>ß
-	
+</div>
 	
 </div>
 
