@@ -52,6 +52,23 @@ f=false,d=document;return{use_existing_jquery:function(){return use_existing_jqu
 
 
 
+<!-- Start HotJar Asynchronous Code -->
+
+<script>
+    (function(f,b){
+        var c;
+        f.hj=f.hj||function(){(f.hj.q=f.hj.q||[]).push(arguments)};
+        f._hjSettings={hjid:15939, hjsv:3};
+        c=b.createElement("script");c.async=1;
+        c.src="//static.hotjar.com/c/hotjar-15939.js?sv=3";
+        b.getElementsByTagName("head")[0].appendChild(c); 
+    })(window,document);
+</script>
+
+
+<!-- End HotJar Asynchronous Code -->
+
+
 </head>
 
 <body <?php body_class(); ?>>
