@@ -84,7 +84,7 @@ get_header(); ?>
 						</div>
 
 						
-						<a id="big-orange-button" class="width_70" href="mailto:hello@kantan.io?subject=Interested%20in%20messaging%20help"><h2><?php the_field('step1_button'); ?></h2></a>
+						<a id="big-orange-button" class="width_70" href="http://bit.ly/1A3KbGE"><h2><?php the_field('step1_button'); ?></h2></a>
 						
 					</div>
 				</div>
@@ -108,7 +108,7 @@ get_header(); ?>
 						<div class="body-copy width_70">
 							<?php the_field('step2_body2'); ?>
 						</div>
-						<a id="big-red-button" class="width_70" href="mailto:hello@kantan.io?subject=Interested%20in%20copy%20and%20page%20optimization">
+						<a id="big-red-button" class="width_70" href="http://bit.ly/1A3KbGE">
 							<h2><?php the_field('step2_button'); ?></h2></a>
 
 					</div>
@@ -134,7 +134,7 @@ get_header(); ?>
 							<?php the_field('step3_body2'); ?>
 						</div>
 
-						<a id="big-blue-button" class="width_70" href="mailto:hello@kantan.io?subject=Interested%20in%20testing%20help"><h2><?php the_field('step3_button'); ?></h2></a>
+						<a id="big-blue-button" class="width_70" href="http://bit.ly/1A3KbGE"><h2><?php the_field('step3_button'); ?></h2></a>
 					</div>
 				</div>
 
